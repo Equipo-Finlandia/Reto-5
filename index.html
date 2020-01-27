@@ -27,34 +27,35 @@
             <div>Entrar</div>
         </a>
     </div>
+    <div id="contenedor">
+        <div id="menu_registro" class="form-group">
+            <h1>Acceder</h1>
 
-    <div id="menu_registro">
-        <h1>Acceder</h1>
+            <form id="form_login" method="" action="">
+                <label for="nombre">
+                    <p>Nombre de usuario:</p>
+                </label>
+                <input type="text" name="nombre" id="usr" class="form-control" placeholder="Usuario">
+                <label for="contraseña">
+                    <p>Contraseña:</p>
+                </label>
+                <input type="password" name="contrasena" id="pwd" class="form-control" placeholder="Contraseña">
 
-        <form id="form_login" method="" action="">
-            <label for="nombre">
-                <p>Nombre de usuario:</p>
-            </label>
-            <input type="text" name="nombre" id="nombre" placeholder="Usuario">
-            <label for="contraseña">
-                <p>Contraseña:</p>
-            </label>
-            <input type="password" name="contrasena" id="contraseña" placeholder="Contraseña">
+                <br />
+                <input type="submit" value="Iniciar Sesion" id="boton2">
 
-            <br />
-            <input type="submit" value="Iniciar Sesion" id="boton2">
-
-            <br />
-            <hr />
-        </form>
-        <h3>Aún no estás colegiado?</h3>
-        <p>Si estás titulado y deseas colegiarte, haz click <a href="">Aqui</a></p>
-        <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
+                <br />
+                <hr />
+            </form>
+            <h3>Aún no estás colegiado?</h3>
+            <p>Si estás titulado y deseas colegiarte, haz click <a href="">Aqui</a></p>
+            <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
+        </div>
+        <div id="acceso">
+            <input type="button" value="Acceder" name="botonAcceso" id="boton1" onClick="cargaLogin()">
+        </div>
     </div>
-    <div id="acceso">
-        <input type="button" value="Acceder" name="botonAcceso" id="boton1" onClick="cargaLogin()">
-    </div>
-
+        
 </body>
 
 </html>
