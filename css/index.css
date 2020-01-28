@@ -13,7 +13,9 @@ body{
     height:768px;
     box-shadow: 0px 0px 20px gray;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 
 h1 {
     padding: 10;
@@ -33,9 +35,8 @@ h1 {
     box-shadow: 1px 1px 4px 4px rgba(140, 140, 140, 1);
     position:fixed;
     overflow:auto;
-    margin-bottom: 50px;
 }
-#encabezado div {
+#encabezadoPrincipal div, #encabezadoSegundaria div{
     text-align: center;
     padding-top: 10px;
     font-size: 14px;
@@ -99,4 +100,88 @@ h1 {
     border: 2px solid white;
     border-bottom: 2px solid gray;
     cursor: pointer;
+}
+
+/* menu izquierda  */
+
+li > ul {
+    position: absolute;
+    top: 0;
+    
+    width: 200px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, .2);
+    -webkit-animation: aparecer .7s;
+    display: none;
+}
+
+ul {
+    list-style: none;
+    background: green;
+}
+
+.container {
+    background: yellow;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    width: 200px;
+    top: 0;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, .2);
+    transition: left .5s ease;
+    z-index: 1000;
+}
+
+#menu_principal a,
+label {
+    color: #868686;
+    display: block;
+    padding-left: 25px;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+#menu_principal {
+    padding-top: 50%;
+}
+
+#menu_principal li {
+    background-color: red;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    width: 100%;
+}
+
+#menu_principal > li {
+    margin: 0 0 5% 0;
+}
+
+
+.boton:hover {
+    left: 100%;
+    cursor: pointer;
+}
+
+.invisible {
+    left: -200px;
+}
+
+.derecha {
+    float: right;
+    line-height: 60px;
+}
+
+.principales {
+    margin-right: 10px;
+}
+
+#menu_principal li:hover > a,
+#menu_principal li:hover > label {
+    color: #fff;
+    cursor: pointer;
+    background-color: #64b4db;
+}
+
+nav ul li:hover > ul {
+    display: inherit;
 }
