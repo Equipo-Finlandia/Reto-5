@@ -65,6 +65,10 @@ h1 {
 #encabezado a div:hover{
     background-color:rgba(255, 255, 255, 0.7);
 }
+#encabezadoPrincipal{
+    margin-right: 50px;
+}
+/*Fin encabezado*/
 
 #menu_registro {
     margin: 100 0 0 290;
@@ -184,4 +188,12 @@ label {
 
 nav ul li:hover > ul {
     display: inherit;
+}
+
+/*Contenido*/
+.noticias{
+    padding-left: 30px;
+}
+.noticias img{
+    width: 300px;
 }
