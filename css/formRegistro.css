@@ -8,19 +8,29 @@ h2 {
 
 
 #formulario {
-    width: 600px;
-    margin: 0 auto;
+    width: 650px;
     border: 2px solid red;
     padding: 20px;
     background-color:bisque;
-}
-
-#form1, #form2{
-    
     column-count: 2;
+    margin: 0 auto;
+    margin-top:50px;
+}
+form{
+    margin:0  auto;
 }
 
-#formulario input,
-#formulario label {
-    margin-left: 20px;
+#form1{
+    margin-left:10px;
+    margin-top:10px;
+}
+
+#form2{
+    margin-top:66px;
+    margin-left:50px;
+}
+
+#boton2{
+    
+    margin-left:-100px;
 }

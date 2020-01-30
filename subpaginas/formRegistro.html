@@ -1,11 +1,11 @@
-<html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="..\css\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="..\css\index.css">
     <link rel="stylesheet" type="text/css" href="..\css\formRegistro.css">
-    <script type="text/javascript" src="js\index.js"></script>
+    <script type="text/javascript" src="..\js\validaFormulario.js"></script>
 </head>
 
 <body>
@@ -36,51 +36,45 @@
         <h2>Formulario de Registro</h2>
 
         <div id="formulario">
-            <form>
+            <form method="post" action="../php/registro.php">
                 <div id="form1">
                     <br />
-                <legend>Formulario de Registro</legend>
-                <label for="nombre">Nombre: </label><br />
-                <label for="apell1">Apellido 1: </label><br />
-                <label for="apell2">Apellido 2: </label><br />
-                <label for="pass">Contraseña: </label><br />
-                <label for="pass2">Repetir contraseña: </label><br /><br />
-                <br /><br /><br />
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" onfocusout="myFunction()"><br />
-                <input type="text" id="apell1" name="apell1" placeholder="Apellido 1"><br />
-                <input type="text" id="apell2" name="apell2" placeholder="Apellido 2"><br />
-                <input type="password" id="pass" name="pass" placeholder="Contraseña"><br />
-                <input type="password" id="pass2" name="pass2" placeholder="Repetir Contraseña"><br />
+                    <legend>Formulario de Registro</legend>
+                    <label for="nombre" id="etiq_nombre">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" onfocusout="validaNombre()"><br />
+
+                    <label for="apell1">Apellido 1: </label>
+                    <input type="text" id="apell1" name="apell1" placeholder="Apellido 1"><br />
+
+                    <label for="apell2">Apellido 2: </label>
+                    <input type="text" id="apell2" name="apell2" placeholder="Apellido 2"><br />
+
+                    <label for="pass">Contraseña: </label>
+                    <input type="password" id="pass" name="pass" placeholder="Contraseña"><br />
+
+                    <label for="pass2">Repetir contraseña: </label>
+                    <input type="password" id="pass2" name="pass2" placeholder="Repetir Contraseña"><br />
                 </div>
+                
+
                 <div id="form2">
-                    <br />
-                <label for="dni">DNI: </label><br />
-                <label for="centroacadem">Centro Academico: </label><br />
-                <label for="direccion">Direccion: </label><br />
-                <label for="titulacion">Titulacion: </label><br />
-                <label for="telefono">Telefono: </label><br /><br />
-                <br /><br />
-                <input type="text" id="dni" name="dni" placeholder="DNI"><br />
-                <input type="text" id="centroacadem" name="centro" placeholder="Centro Academico"><br />
-                <input type="text" id="direccion" name="direccion" placeholder="Dirección"><br />
-                <input type="text" id="titulacion" name="titulacion" placeholder="Titulación"><br />
-                <input type="text" id="telefono" name="telefono" placeholder="Teléfono"><br />
-                </div>
-                    
-                <input type="submit" value="Enviar">
+                    <br /><br /><br /><br />
+                    <label for="dni">DNI: </label>
+                    <input type="text" id="dni" name="dni" placeholder="DNI"><br />
+                    <label for="centroacadem">Centro Academico: </label>
+                    <input type="text" id="centroacadem" name="centro" placeholder="Centro Academico"><br />
+                    <label for="direccion">Direccion: </label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Dirección"><br />
+                    <label for="titulacion">Titulacion: </label>
+                    <input type="text" id="titulacion" name="titulacion" placeholder="Titulación"><br />
+                    <label for="telefono">Telefono: </label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono"><br />
+                    </div>
+                    <br /><br />
+
+                <input type="submit" value="Enviar" id="boton2">
 
             </form>
         </div>
     </div>
-
-
-<script>
-function myFunction() {
-  var x = document.getElementById("nombre");
-  x.value = x.value.toUpperCase();
-    x.style.color="red";
-}
-</script>
-</body>
-
-</html>
+</body></html>
