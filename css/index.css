@@ -35,6 +35,7 @@ h1 {
     box-shadow: 1px 1px 4px 4px rgba(140, 140, 140, 1);
     position:fixed;
     overflow:auto;
+    z-index: 999;
 }
 #encabezadoPrincipal div, #encabezadoSegundaria div{
     text-align: center;
@@ -81,6 +82,7 @@ h1 {
     display: none;
     box-shadow: 9px 9px 20px rgba(140, 140, 140, 0.5) ;
     text-align: center;
+    z-index: 999;
 }
 
 #usr, #pwd {
