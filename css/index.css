@@ -197,3 +197,6 @@ nav ul li:hover > ul {
 .noticias img{
     width: 300px;
 }
+.row h3{
+    padding-left: 30px;
+}
