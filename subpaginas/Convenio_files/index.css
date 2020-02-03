@@ -1,0 +1,233 @@
+body{
+    margin: 0 auto;
+    background-size: 100% auto;
+}
+
+#CTSPV{
+    margin-top: 40px;
+}
+
+#contenedor {
+    margin: 0 auto;
+    width:1024px;
+    min-height: 965px;
+    box-shadow: 0px 0px 20px gray;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+h1{
+    padding-left: 20px;
+}
+
+/* Encabezado */
+#encabezado{
+    width: 100%;
+    height: 40px;
+    background-color:rgba(184, 184, 184, 1);
+    box-shadow: 1px 1px 4px 4px rgba(140, 140, 140, 1);
+    position:fixed;
+    overflow:auto;
+    z-index: 999;
+}
+#encabezadoPrincipal div, #encabezadoSegundaria div{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    color: blue;
+}
+#encabezado a div{
+    float: right;
+    height: 40px;
+    width: 100px;
+}
+
+#boton2 {
+    margin-top: 20px;
+    width: 120px;
+    height: 30px;
+    border-radius: 50px;
+    background-color:#ef0000;
+    color: white;
+    border: none;
+}
+
+#boton2:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+#encabezado a div:hover{
+    background-color:rgba(255, 255, 255, 0.7);
+}
+#encabezadoPrincipal{
+    margin-right: 50px;
+}
+/*Fin encabezado*/
+
+#menu_registro {
+    margin: 100 0 0 290;
+    width: 450px;
+    height: 450px;
+    background-color: white;
+    position: absolute;
+    font-family: verdana;
+    position: absolute;
+    display: none;
+    box-shadow: 9px 9px 20px rgba(140, 140, 140, 0.5) ;
+    text-align: center;
+    z-index: 999;
+}
+
+#usr, #pwd {
+    width:200px;
+    margin-left:120px;
+}
+
+#boton1 {
+    margin-top: 500px;
+    margin-left:500px;
+    width: 90px;
+    height: 30px;
+    border-radius: 50px;
+    background-color:#ef0000;
+    color: white;
+    border: none;
+}
+
+#boton1:hover {
+    transition: 1s;
+    border: 2px solid white;
+    border-bottom: 2px solid gray;
+    cursor: pointer;
+}
+
+/* menu izquierda  */
+
+li > ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, .2);
+    -webkit-animation: aparecer .7s;
+    display: none;
+}
+
+ul {
+    list-style: none;
+    background: green;
+    padding-left: 0px;
+    margin-top: -30px;
+}
+
+.contenedor{
+    background: black;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    width: 200px;
+    top: 36px;
+    margin-top: -10px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, .2);
+    transition: left .5s ease;
+    z-index: 1000;
+}
+
+#menu_principal a,
+label {
+    color: #868686;
+    display: block;
+    padding-left: 25px;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+#menu_principal {
+    padding-top: 50%;
+}
+
+#menu_principal li {
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    width: 100%;
+    
+}
+
+#menu_principal > li {
+    
+    margin: 0 0 5% 0;
+}
+
+
+.boton:hover {
+    left: 100%;
+    cursor: pointer;
+}
+
+.invisible {
+    left: -200px;
+}
+
+.derecha {
+    float: right;
+    line-height: 60px;
+}
+
+.principales {
+    margin-right: 10px;
+}
+
+#menu_principal li:hover > a,
+#menu_principal li:hover > label {
+    color: green;
+    cursor: pointer;
+    background-color: red;
+    padding-left: 10px;
+}
+
+nav ul li:hover > ul {
+    display: inherit;
+}
+
+/* Ocular  y mostrar menu horizontal y vertical*/
+
+.contenedor{
+    
+    display:none;
+}
+
+@media screen and (max-width:1024px){
+    
+    .contenedor{
+        
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width:1024px){
+    
+    #encabezado{
+        
+        
+        transition-duration: 2s;
+        display: none;
+        
+        
+    }
+    
+}
+
+/*Contenido*/
+
+.noticias{
+    padding-left: 30px;
+}
+.noticias img{
+    width: 300px;
+}
+.row h3{
+    padding-left: 30px;
+}
