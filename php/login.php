@@ -1,11 +1,4 @@
-<html lang="es">
-
- <head>
- <meta charset="UTF-8"> 
- </head>
- 
- <body>
-   <?php
+ <?php
     //IP DEL SERVIDOR MYSQL
     $host="localhost";
     //Puerto
@@ -49,52 +42,20 @@
  echo "El nombre introducido es:<br>";
  echo $_REQUEST['nombre'];
  $nombre =$_REQUEST['nombre'];
- 
+  
  echo "<br> La contraseña introducida es:<br>";
  echo $_REQUEST['pass'];
  $pass = $_REQUEST['pass'];
- 
- echo "<br> Apellido 1:";
- echo $_REQUEST['apell1'];
- $apell1=$_REQUEST['apell1'];
- 
- echo "<br> Apellido 2:";
- echo $_REQUEST['apell2'];
- $apell2=$_REQUEST['apell2'];
- 
- echo "<br> DNI:";
- echo $_REQUEST['dni'];
- $dni = $_REQUEST['dni'];
- 
- echo "<br> Centro Académico:";
- echo $_REQUEST['centro'];
- $centroacadem=$_REQUEST['centro'];
- 
- echo "<br> Direccion: ";
- echo $_REQUEST['direccion'];
- $direccion = $_REQUEST['direccion'];
- 
- echo "<br> Titulación: ";
- echo $_REQUEST ['titulacion'];
- $titulacion= $_REQUEST['titulacion'];
- 
- echo "<br> Teléfono: ";
- echo $_REQUEST ['telefono'];
- $telefono = $_REQUEST['telefono'];
 
- echo "<br>";
-
- $insertar = "INSERT INTO  $tabla VALUES('$nombre','$apell1','$apell2','$pass', $dni, '$centroacadem', '$direccion', '$titulacion',$telefono)";
- echo $insertar;
-
-if ($link->query($insertar) === TRUE) {
-    echo "Insertado Correctamente";
-} else {
-    echo "Error: " . $insertar . "<br>" . $link->error;
-}
-
-
- ?>
+  
+ $query = "SELECT Nombre FROM $tabla WHERE Nombre=$nombre";
+ $query2= "SELECT Contraseña FROM $tabla WHERE Contraseña=$pass";
+ $result = mysqli_query($link, $query, $query2);
  
- </body>
- </html>
+ if($result){
+	 echo "Has iniciado sesión como :" $nombre;
+ }else{
+	 echo "Contraseña o usuario incorrectos";
+ }
+
+?>
