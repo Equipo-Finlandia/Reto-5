@@ -113,7 +113,7 @@ h1 {
 li > ul {
     position: absolute;
     top: 0;
-    
+    left: 100%;
     width: 200px;
     box-shadow: 3px 0 10px rgba(0, 0, 0, .2);
     -webkit-animation: aparecer .7s;
@@ -123,15 +123,18 @@ li > ul {
 ul {
     list-style: none;
     background: green;
+    padding-left: 0px;
+    margin-top: -30px;
 }
 
-.container {
-    background: yellow;
+.contenedor{
+    background: black;
     position: fixed;
     height: 100%;
     left: 0;
     width: 200px;
-    top: 0;
+    top: 36px;
+    margin-top: -10px;
     box-shadow: 3px 0 10px rgba(0, 0, 0, .2);
     transition: left .5s ease;
     z-index: 1000;
@@ -151,14 +154,15 @@ label {
 }
 
 #menu_principal li {
-    background-color: red;
     height: 60px;
     line-height: 60px;
     position: relative;
     width: 100%;
+    
 }
 
 #menu_principal > li {
+    
     margin: 0 0 5% 0;
 }
 
@@ -183,16 +187,47 @@ label {
 
 #menu_principal li:hover > a,
 #menu_principal li:hover > label {
-    color: #fff;
+    color: green;
     cursor: pointer;
-    background-color: #64b4db;
+    background-color: red;
+    padding-left: 10px;
 }
 
 nav ul li:hover > ul {
     display: inherit;
 }
 
+/* Ocular  y mostrar menu horizontal y vertical*/
+
+.contenedor{
+    
+    display:none;
+}
+
+@media screen and (max-width:1024px){
+    
+    .contenedor{
+        
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width:1024px){
+    
+    #encabezado{
+        
+        
+        transition-duration: 2s;
+        display: none;
+        
+        
+    }
+    
+}
+
 /*Contenido*/
+
 .noticias{
     padding-left: 30px;
 }
