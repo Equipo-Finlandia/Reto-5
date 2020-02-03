@@ -15,7 +15,7 @@
     //contraseña
     $contrasena="Passw0rd";
     //Nombre de Base de Datos
-    $baseDatos="usuarioSergio";
+    $baseDatos="CTSPV";
     //tabla
     $tabla="USUARIOSREGISTRADOS";
     
@@ -48,31 +48,42 @@
 
  echo "El nombre introducido es:<br>";
  echo $_REQUEST['nombre'];
+ $nombre =$_REQUEST['nombre'];
  
  echo "<br> La contraseña introducida es:<br>";
  echo $_REQUEST['pass'];
+ $pass = $_REQUEST['pass'];
  
- echo "<br> Apellido 1:"
- echo $_REQUEST['apell1']
+ echo "<br> Apellido 1:";
+ echo $_REQUEST['apell1'];
+ $apell1=$_REQUEST['apell1'];
  
- echo "<br> Apellido 2:"
- echo $_REQUEST['apell2']
+ echo "<br> Apellido 2:";
+ echo $_REQUEST['apell2'];
+ $apell1=$_REQUEST['apell2'];
  
- echo "<br> DNI:"
- echo $_REQUEST['dni']
+ echo "<br> DNI:";
+ echo $_REQUEST['dni'];
+ $dni = $_REQUEST['dni'];
  
- echo "<br> Centro Académico:"
- echo $_REQUEST['centroacadem']
+ echo "<br> Centro Académico:";
+ echo $_REQUEST['centroacadem'];
+ $centroacadem=$_REQUEST['centroacadem'];
  
- echo "<br> Direccion: "
- echo $_REQUEST['centroacadem']
+ echo "<br> Direccion: ";
+ echo $_REQUEST['direccion'];
+ $direccion = $_REQUEST['direccion'];
  
- echo "<br> Titulación: "
- echo $_REQUEST ['titulacion']
+ echo "<br> Titulación: ";
+ echo $_REQUEST ['titulacion'];
+ $titulacion= $_REQUEST['titulacion'];
  
- echo "<br> Teléfono: "
- echo $_REQUEST ['telefono']
+ echo "<br> Teléfono: ";
+ echo $_REQUEST ['telefono'];
+ $telefono = $_REQUEST['telefono'];
 
+ $insertar = "INSERT INTO $tabla VALUES('$nombre','$apell1','$apell2','$pass', '$dni', '$centroacadem', '$direccion', '$titulacion','$telefono')";
+ echo $insertar;
  ?>
  
  </body>
