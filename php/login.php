@@ -39,30 +39,25 @@
     
  $link =Conectarse();
 
- echo "El nombre introducido es:<br>";
- echo $_REQUEST['nombre'];
+ echo "usuario: ";
  $nombre =$_REQUEST['nombre'];
-  
- echo "<br> La contraseña introducida es:<br>";
- echo $_REQUEST['contrasena'];
- $pass = $_REQUEST['contrasena'];
+ echo $nombre;
 
+ echo "<br> Contraseña: ";
+ $contrase = $_REQUEST['contrasena'];
+ echo $contrase;
  echo "<br>";
+ $query="SELECT * FROM $tabla WHERE Nombre = '$nombre' AND Contraseña = '$contrase'";
 
- $query = "SELECT Nombre, Contraseña FROM " .$tabla. " WHERE Nombre='$nombre' AND Contraseña='$pass'";
- 
- $result=mysqli_query($query);
- echo "<br>";
- echo $query;
- echo $result;
- 
- echo "<br>";
+       $result = mysqli_query($link, $query)
+         or die ("No se pudo consultar la base de datos ");
 
-if($result){
-	 echo "<br> Has iniciado sesión como : $nombre";
-     
+$row= mysqli_fetch_array($result);
+
+ if($row['Nombre']==$nombre && $row['Contraseña']==$contrase){
+	 echo "<br> Has iniciado sesión correctamente!"; 
  }else{
-     die('<br> Contraseña o usuario incorrectos ' .mysqli_error());
+     echo "Contraseña o usuario incorrectos";
  }
  mysqli_close($link);
  
