@@ -44,18 +44,26 @@
  $nombre =$_REQUEST['nombre'];
   
  echo "<br> La contraseña introducida es:<br>";
- echo $_REQUEST['pass'];
- $pass = $_REQUEST['pass'];
+ echo $_REQUEST['contrasena'];
+ $pass = $_REQUEST['contrasena'];
 
-  
- $query = "SELECT Nombre FROM $tabla WHERE Nombre=$nombre";
- $query2= "SELECT Contraseña FROM $tabla WHERE Contraseña=$pass";
- $result = mysqli_query($link, $query, $query2);
+ echo "<br>";
+
+ $query = "SELECT Nombre, Contraseña FROM " .$tabla. " WHERE Nombre='$nombre' AND Contraseña='$pass'";
  
- if($result){
-	 echo "Has iniciado sesión como :" $nombre;
- }else{
-	 echo "Contraseña o usuario incorrectos";
- }
+ $result=mysqli_query($query);
+ echo "<br>";
+ echo $query;
+ echo $result;
+ 
+ echo "<br>";
 
+if($result){
+	 echo "<br> Has iniciado sesión como : $nombre";
+     
+ }else{
+     die('<br> Contraseña o usuario incorrectos ' .mysqli_error());
+ }
+ mysqli_close($link);
+ 
 ?>
