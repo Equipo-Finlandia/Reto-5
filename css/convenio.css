@@ -1,0 +1,15 @@
+#definicionConvenio{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+}
+
+#definicionConvenio p{
+    margin-bottom: 70px;
+}
+
+/*Linea de separacion*/
+hr{
+    width: 984px;
+    
+}
