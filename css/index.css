@@ -112,6 +112,7 @@ li > ul {
     box-shadow: 3px 0 10px rgba(0, 0, 0, .2);
     -webkit-animation: aparecer .7s;
     display: none;
+     margin-top: 0px;
 }
 
 ul {
@@ -132,6 +133,7 @@ ul {
     box-shadow: 3px 0 10px rgba(0, 0, 0, .2);
     transition: left .5s ease;
     z-index: 1000;
+    margin-right: -10px;
 }
 
 #menu_principal a,
