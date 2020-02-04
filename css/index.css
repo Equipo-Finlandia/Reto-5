@@ -29,7 +29,7 @@ h1{
     box-shadow: 1px 1px 4px 4px rgba(140, 140, 140, 1);
     position:fixed;
     overflow:auto;
-    z-index: 999;
+    z-index: 900;
 }
 #encabezadoPrincipal div, #encabezadoSegundaria div{
     text-align: center;

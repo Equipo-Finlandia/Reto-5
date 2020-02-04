@@ -20,11 +20,12 @@ function modoNoche(modoNull) { //recibir llamada, llamarlo como @modoNull
 	var body = document.body;//Coger los elementos
 	var contenedor = document.getElementById('contenedor');
 	var CTSPV = document.getElementById('CTSPV');
+	var noticia = document.getElementsByClassName('row');
 	
 	if (this.modo=='negro') {//si @modo = 'negro', poner en negro
-		contenedor.style.backgroundColor = 'black';
-		contenedor.style.color = '#A9A9A9';
-		body.style.backgroundColor = '#A9A9A9';
+		contenedor.style.backgroundColor = '#333333';
+		contenedor.style.color = '#cccccc';
+		body.style.backgroundColor = '#cccccc';
 		CTSPV.src = "imagenes/cebancNoche.png";
 		this.modo='blanco'; //cambiar @modo a 'blanco', así siguiente vez que ejecute se va ver HTML en blanco
 	}else{//si @modo = 'blanco', poner en blanco
