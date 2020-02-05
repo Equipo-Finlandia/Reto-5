@@ -27,6 +27,7 @@ function modoNoche(modoNull) { //recibir llamada, llamarlo como @modoNull
 		contenedor.style.color = '#cccccc';
 		body.style.backgroundColor = '#666666';
 		CTSPV.src = "imagenes/cebancNoche.png";
+		linea.style='border-color:white'
 
 		this.modo='blanco'; //cambiar @modo a 'blanco', así siguiente vez que ejecute se va ver HTML en blanco
 	}else{//si @modo = 'blanco', poner en blanco
