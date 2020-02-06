@@ -84,7 +84,7 @@
 
  echo "<br>";
 
- $insertar = "INSERT INTO  $tabla VALUES('$nombre','$apell1','$apell2','$pass', $dni, '$centroacadem', '$direccion', '$titulacion',$telefono)";
+ $insertar = "INSERT INTO  $tabla VALUES('$nombre','$apell1','$apell2','$pass', '$dni', '$centroacadem', '$direccion', '$titulacion',$telefono)";
  echo $insertar;
 
 if ($link->query($insertar) === TRUE) {
