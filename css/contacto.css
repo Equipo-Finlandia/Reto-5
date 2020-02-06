@@ -10,3 +10,8 @@ p{
 .row {
     margin-top: 20px;
 }
+
+#menu_registro{
+    margin-top:-100px;
+    height:550px;
+}
