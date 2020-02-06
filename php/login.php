@@ -1,4 +1,16 @@
- <?php
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title> Iniciando sesion </title>
+</head>
+<body>
+<style>
+    body{
+        background-color:rgb(0,11,28);
+    }
+    
+</style>
+<?php
     //IP DEL SERVIDOR MYSQL
     $host="localhost";
     //Puerto
@@ -47,19 +59,29 @@
  $contrase = $_REQUEST['contrasena'];
  echo $contrase;
  echo "<br>";
- $query="SELECT * FROM $tabla WHERE Nombre = '$nombre' AND Contraseña = '$contrase'";
 
-       $result = mysqli_query($link, $query)
-         or die ("No se pudo consultar la base de datos ");
 
-$row= mysqli_fetch_array($result);
+$query="SELECT * FROM $tabla WHERE Nombre = '$nombre' AND Contraseña = '$contrase'";
+
+ $result = mysqli_query($link, $query)
+      or die ("No se pudo consultar la base de datos ");
+
+ $row= mysqli_fetch_array($result);
+
 
  if($row['Nombre']==$nombre && $row['Contraseña']==$contrase){
 	 echo "<br> Has iniciado sesión correctamente!"; 
- header("Location: https://192.168.0.104/");
+     echo "<br> Volviendo a inicio";
+      header("Refresh:5; URL=https://192.168.0.104/");
+    
  }else{
      echo "Contraseña o usuario incorrectos";
  }
  mysqli_close($link);
- 
 ?>
+<h2>Iniciando Sesión</h2>
+    <div id="cargando">
+        <img src="../imagenes/carga.gif" alt="Rueda de carga de página">
+    </div>
+</body>
+</html>
