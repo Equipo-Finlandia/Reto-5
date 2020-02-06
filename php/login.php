@@ -56,6 +56,7 @@ $row= mysqli_fetch_array($result);
 
  if($row['Nombre']==$nombre && $row['Contraseña']==$contrase){
 	 echo "<br> Has iniciado sesión correctamente!"; 
+ header("Location: https://192.168.0.104/");
  }else{
      echo "Contraseña o usuario incorrectos";
  }
