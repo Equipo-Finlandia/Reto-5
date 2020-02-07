@@ -117,15 +117,15 @@ li > ul {
 
 ul {
     list-style: none;
-    background: green;
+    background: rgba(184, 184, 184, 1);
     padding-left: 0px;
     margin-top: -30px;
 }
 
-.contenedor{
+#menu{
     background: black;
     position: fixed;
-    height: 100%;
+    height: 690px;
     left: 0;
     width: 200px;
     top: 36px;
@@ -138,7 +138,7 @@ ul {
 
 #menu_principal a,
 label {
-    color: #868686;
+    color: blue;
     display: block;
     padding-left: 25px;
     text-decoration: none;
@@ -183,9 +183,9 @@ label {
 
 #menu_principal li:hover > a,
 #menu_principal li:hover > label {
-    color: green;
+    color: #002f6c;
     cursor: pointer;
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.7);
     padding-left: 10px;
 }
 
@@ -193,34 +193,52 @@ nav ul li:hover > ul {
     display: inherit;
 }
 
+#botonMenu{
+    
+    background-image: url('../imagenes/botonmenu.PNG');
+    background-size: cover;
+    width: 60px;
+    height: 50px;
+    position:absolute;
+    z-index: 6;
+}
+
 /* Ocular  y mostrar menu horizontal y vertical*/
 
-.contenedor{
+#menu{
+    
+    display: none;
+    z-index: 5;
+}
+
+#botonmenu{
     
     display:none;
+    
 }
 
-@media screen and (max-width:1024px){
+
+
+@media screen and (max-width:900px){
     
-    .contenedor{
+    #botonmenu{
         
         display: block;
+        
     }
-    
-}
-
-@media screen and (max-width:1024px){
-    
-    #encabezado{
+        #encabezado{
         
         
-        transition-duration: 2s;
+ 
         display: none;
         
         
+
+        
     }
     
 }
+
 
 /*Contenido*/
 
