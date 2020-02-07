@@ -7,7 +7,13 @@
 <style>
     body{
         background-color:rgb(0,11,28);
+        color:white;
     }
+
+#cargando img{
+margin-left:30%;
+
+}
     
 </style>
 <?php
@@ -50,18 +56,9 @@
     }
     
  $link =Conectarse();
-
- echo "usuario: ";
  $nombre =$_REQUEST['nombre'];
- echo $nombre;
-
- echo "<br> Contraseña: ";
  $contrase = $_REQUEST['contrasena'];
- echo $contrase;
- echo "<br>";
-
-
-$query="SELECT * FROM $tabla WHERE Nombre = '$nombre' AND Contraseña = '$contrase'";
+ $query="SELECT * FROM $tabla WHERE Nombre = '$nombre' AND Contraseña = '$contrase'";
 
  $result = mysqli_query($link, $query)
       or die ("No se pudo consultar la base de datos ");
@@ -70,16 +67,18 @@ $query="SELECT * FROM $tabla WHERE Nombre = '$nombre' AND Contraseña = '$contra
 
 
  if($row['Nombre']==$nombre && $row['Contraseña']==$contrase){
-	 echo "<br> Has iniciado sesión correctamente!"; 
+	 echo "<h2><br> Has iniciado sesión correctamente!</h2>"; 
      echo "<br> Volviendo a inicio";
       header("Refresh:5; URL=https://192.168.0.104/");
     
  }else{
-     echo "Contraseña o usuario incorrectos";
+     echo "<h2>Contraseña o usuario incorrectos</h2>";
+ echo "<br> Volviendo a inicio";
+  header("Refresh:5; URL=https://192.168.0.104/");
  }
  mysqli_close($link);
 ?>
-<h2>Iniciando Sesión</h2>
+
     <div id="cargando">
         <img src="../imagenes/carga.gif" alt="Rueda de carga de página">
     </div>
