@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <div>
+    
         <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
-    </div>
+  
     <div id="menu">
         <nav>
             <ul id="menu_principal">
@@ -144,6 +144,26 @@
             </div>
         </div>
     </div>
-</body>
 
-</html>
+    <script>
+        function responsive(x) {
+            
+            var botonmenu=document.getElementById("botonmenu");
+            
+            var contenedor=document.getElementById("menu_principal");
+            
+            if (x.matches) { // If media query matches
+                document.body.style.backgroundColor = "yellow";
+               
+            } else 
+                document.body.style.backgroundColor = "red";
+                
+            
+        }
+
+        var x = window.matchMedia("(max-width: 500px)")
+        responsive(x) // Call listener function at run time
+        x.addListener(responsive) // Attach listener function on state changes
+    </script>
+
+</body></html>
