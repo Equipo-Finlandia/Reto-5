@@ -98,7 +98,7 @@ h1 {
 }
 
 #boton1 {
-    margin-top: 100px;
+    
     margin-left: 500px;
     width: 90px;
     height: 30px;
@@ -274,7 +274,7 @@ nav ul li:hover > ul {
     }
 
     #boton1 {
-        margin: 60 0 0 390;
+        margin: 0 0 0 390;
     }
 
 }

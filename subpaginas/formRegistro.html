@@ -1,6 +1,7 @@
 <html lang="es">
 
 <head>
+    <title>Registro</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="..\css\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="..\css\index.css">
@@ -10,7 +11,6 @@
 
 <body>
     <div id="encabezado">
-        COLEGOIOA
         <a href="index.html">
             <div>Colegiacion</div>
         </a>
@@ -31,7 +31,7 @@
         </a>
     </div>
     <div id="contenedor">
-        <img id="CTSPV" src="../imagenes/cebanc.jpg">
+        <img id="CTSPV" src="../imagenes/cebanc.jpg" alt="logotipo del colegio">
 
         <h2>Formulario de Registro</h2>
 
@@ -43,19 +43,19 @@
                     <label for="nombre" id="etiq_nombre">Nombre: </label>
                     <input type="text" id="nombre" name="nombre" placeholder="Nombre" onfocusout="validaNombre()"><br />
 
-                    <label for="apell1">Apellido 1: </label>
-                    <input type="text" id="apell1" name="apell1" placeholder="Apellido 1"><br />
+                    <label for="apell1" id="etiq_apellido1">Apellido 1: </label>
+                    <input type="text" id="apell1" name="apell1" placeholder="Apellido 1" onfocusout="validaApellido1()"><br />
 
-                    <label for="apell2">Apellido 2: </label>
-                    <input type="text" id="apell2" name="apell2" placeholder="Apellido 2"><br />
+                    <label for="apell2" id="etiq_apellido2">Apellido 2: </label>
+                    <input type="text" id="apell2" name="apell2" placeholder="Apellido 2" onfocusout="validaApellido2()"><br />
 
-                    <label for="pass">Contraseña: </label>
-                    <input type="password" id="pass" name="pass" placeholder="Contraseña"><br />
+                    <label for="pass" id="etiq_contrasena">Contraseña: </label>
+                    <input type="password" id="pass" name="pass" placeholder="Contraseña" onfocusout="validaContrasena()"><br />
 
-                    <label for="pass2">Repetir contraseña: </label>
-                    <input type="password" id="pass2" name="pass2" placeholder="Repetir Contraseña"><br />
+                    <label for="pass2" id="etiq_contrasena2">Repetir contraseña: </label>
+                    <input type="password" id="pass2" name="pass2" placeholder="Repetir Contraseña" onfocusout="comparaContrasena()"><br />
                 </div>
-                
+
 
                 <div id="form2">
                     <br /><br /><br /><br />
@@ -69,12 +69,14 @@
                     <input type="text" id="titulacion" name="titulacion" placeholder="Titulación"><br />
                     <label for="telefono">Telefono: </label>
                     <input type="text" id="telefono" name="telefono" placeholder="Teléfono"><br />
-                    </div>
-                    <br /><br />
+                </div>
+                <br /><br />
 
                 <input type="submit" value="Enviar" id="boton2">
 
             </form>
         </div>
     </div>
-</body></html>
+</body>
+
+</html>
