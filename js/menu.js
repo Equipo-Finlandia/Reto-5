@@ -6,6 +6,7 @@
 			
             var menuvertical = document.getElementById("menu");
 			
+			
 
 			 if(abierto === true){
 				
