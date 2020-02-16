@@ -56,24 +56,21 @@
                     <input type="password" id="pass2" name="pass2" placeholder="Repetir Contraseña" onfocusout="comparaContrasena()"><br />
                 </div>
 
-
                 <div id="form2">
                     <br /><br /><br /><br />
-                    <label for="dni">DNI: </label>
-                    <input type="text" id="dni" name="dni" placeholder="DNI"><br />
-                    <label for="centroacadem">Centro Academico: </label>
-                    <input type="text" id="centroacadem" name="centro" placeholder="Centro Academico"><br />
-                    <label for="direccion">Direccion: </label>
-                    <input type="text" id="direccion" name="direccion" placeholder="Dirección"><br />
-                    <label for="titulacion">Titulacion: </label>
-                    <input type="text" id="titulacion" name="titulacion" placeholder="Titulación"><br />
-                    <label for="telefono">Telefono: </label>
-                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono"><br />
+                    <label for="dni" id="etiq_dni">DNI: </label>
+                    <input type="text" id="dni" name="dni" placeholder="DNI" onfocusout="validaDNI()"><br />
+                    <label for="centroacadem" id="etiq_centro">Centro Academico: </label>
+                    <input type="text" id="centroacadem" name="centro" placeholder="Centro Academico" onfocusout="validaCentro()"><br />
+                    <label for="direccion" id="etiq_direccion">Direccion: </label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Dirección" onfocusout="validaDireccion()"><br />
+                    <label for="titulacion" id="etiq_titulacion">Titulacion: </label>
+                    <input type="text" id="titulacion" name="titulacion" placeholder="Titulación" onfocusout="validaTitulacion()"><br />
+                    <label for="telefono" id="etiq_telefono">Telefono: </label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono" onfocusout="validaTelefono()"><br />
                 </div>
                 <br /><br />
-
                 <input type="submit" value="Enviar" id="boton2">
-
             </form>
         </div>
     </div>
