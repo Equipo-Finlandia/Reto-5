@@ -217,6 +217,7 @@ nav ul li:hover > ul {
     position: absolute;
     z-index: 6;
     display: none;
+    position:fixed;
 }
 
 /* Ocular  y mostrar menu horizontal y vertical*/
