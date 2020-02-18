@@ -161,25 +161,25 @@
     </div>
 
     <script>
-        function responsive(x) {
+        function responsive(resolucion) {
 
             var menuvertical = document.getElementById("menu");
 
 
-            if (x.matches) { // si coincide con la resolución de ventana
+            if (resolucion.matches) { // si coincide con la resolución de ventana
 
             } else {
                 menuvertical.style.display = "none";
-
+                abierto=false;
             }
         }
 
-        var x = window.matchMedia("(max-width: 900px)")
-        responsive(x) // Llama al listener
-        x.addListener(responsive); //Vincula el listener al cambiar de estado
+        var resolucion = window.matchMedia("(max-width: 900px)");
+        responsive(resolucion); // Llamada al listener y le pasa como parametro la variable resolucion
+        resolucion.addListener(responsive); //Vincula el listener al cambiar de resolución la ventana
 
 
-        //Funcion que "abre" el menu lateral
+        //Funcion que se encarga de mostrar el menu lateral
 
         var abierto = false;
 
@@ -197,6 +197,8 @@
             }
         }
 
+        
+        //Listener que queda a la escucha de si se hace click en el body, al tener el menu lateral abierto y lo oculta
         document.body.addEventListener("click", cierraMenu, true);
 
         function cierraMenu() {
