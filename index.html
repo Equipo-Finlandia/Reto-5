@@ -161,6 +161,8 @@
     </div>
 
     <script>
+        
+        
         function responsive(resolucion) {
 
             var menuvertical = document.getElementById("menu");
@@ -171,6 +173,7 @@
             } else {
                 menuvertical.style.display = "none";
                 abierto=false;
+                 console.log(abierto);
             }
         }
 
@@ -179,33 +182,33 @@
         resolucion.addListener(responsive); //Vincula el listener al cambiar de resolución la ventana
 
 
-        //Funcion que se encarga de mostrar el menu lateral
-
-        var abierto = false;
-
+       
+        //Variable booleana que se encarga de almacenar el estado del menu lateral, si está abierto o no.
+        var abierto=false;
+         //Funcion que se encarga de mostrar el menu lateral
         function cargaMenu() {
             var menuvertical = document.getElementById("menu");
-            if (abierto === true) {
+            
+            if (abierto == true) {
                 menuvertical.style.display = "none";
                 console.log(abierto);
                 abierto = false;
-
             } else {
                 menuvertical.style.display = "block";
-                console.log(abierto);
+                console.log("abierto = " +abierto);
                 abierto = true;
             }
         }
 
-        
+        var contenedor = document.getElementById("contenedor");
         //Listener que queda a la escucha de si se hace click en el body, al tener el menu lateral abierto y lo oculta
-        document.body.addEventListener("click", cierraMenu, true);
+        contenedor.addEventListener("click", cierraMenu, true);
 
         function cierraMenu() {
             var menuvert = document.getElementById("menu");
 
-            menuvert.style.display = "none";
-            abierto = false;
+           menuvert.style.display = "none";
+           abierto=false;
         }
 
     </script>
