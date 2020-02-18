@@ -12,7 +12,6 @@ body {
     width: 1024px;
     min-height: 965px;
     box-shadow: 0px 0px 20px gray;
-    opacity: 0.5;
 }
 
 ::-webkit-scrollbar {
