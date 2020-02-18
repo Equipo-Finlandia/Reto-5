@@ -9,6 +9,71 @@
 </head>
 
 <body>
+
+    <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
+
+    <div id="menu">
+        <nav>
+            <ul id="menu_principal">
+                <li><a href="#">🏠 Inicio</a></li>
+                <li>
+                    <label for="submenu1">
+                        🏫 Colegio
+                    </label>
+                    <ul>
+                        <li><a href="paginas/quienes.html">🏫 ¿Quiénes somos?</a></li>
+                        <li><a href="paginas/historia.html">📜 Historia</a></li>
+                        <li><a href="paginas/contactanos.html">☎️ Contactanos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="submenu2">
+                        🤝 Convenios
+                    </label>
+                    <ul>
+                        <li><a href="paginas/conquien.html">❓¿Con quién?</a></li>
+                        <li><a href="paginas/cuando.html">🕔 ¿Desde cuándo?</a></li>
+                        <li><a href="paginas/enlaces.html">🌐 Enlaces</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="submenu3">
+                        🎓 Colegiación
+                    </label>
+                    <ul>
+                        <li><a href="paginas/razones.html">👍 Razones</a></li>
+                        <li><a href="paginas/requisitos.html">✅ Requisitos</a></li>
+                        <li><a href="paginas/inscripcion.html">🖊️ Inscripción</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="submenu4">
+                        📑 Modelos de contrato
+                    </label>
+                    <ul>
+                        <li><a href="paginas/temporal.html">⌚ Temporal</a></li>
+                        <li><a href="paginas/indefinido.html">⌚ Indefinido</a></li>
+                        <li><a href="paginas/practicas.html">⌚ Prácticas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="submenu5">
+                        🖥️ Formación
+                    </label>
+                    <ul>
+                        <li><a href="paginas/cusos.html">📋 Cursos</a></li>
+                        <li><a href="paginas/seminarios.html">🏛️ Seminarios</a></li>
+                        <li><a href="paginas/charlas.html">🗣️ Charlas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="submenu6">
+                        💰 Bolsa de empleo
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <div id="encabezado">
         <div id="EncabezadoSegundaria">
             <a href="index.html">
@@ -65,8 +130,8 @@
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
-         <!--Primera noticia-->
-         <div class="row">
+        <!--Primera noticia-->
+        <div class="row">
             <h3>Los riesgos de "Crunch" laboral</h3>
             <div class="col-sm-4 noticias">
                 <img src="imagenes/trabajador.jpg" class="noticiaPng">
@@ -92,8 +157,49 @@
         <div id="acceso">
             <input type="button" value="Acceder" name="botonAcceso" id="boton1" onClick="cargaLogin()">
         </div>
-        
+
     </div>
+    
+        <script>
+        function responsive(x) {
+
+            var menuvertical = document.getElementById("menu");
+
+
+            if (x.matches) { // si coincide con la resolución de ventana
+                document.body.style.backgroundColor = "yellow";
+                
+            } else {
+                document.body.style.backgroundColor = "red";
+                menuvertical.style.display = "none";
+                
+                
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 900px)")
+        responsive(x) // Llama al listener
+        x.addListener(responsive); //Vincula el listener al cambiar de estado
+
+        
+        //Funcion que "abre" el menu lateral
+        
+        var abierto = false;
+        function cargaMenu() {
+            var menuvertical = document.getElementById("menu");
+            if (abierto === true) {
+                menuvertical.style.display = "none";
+                console.log(abierto);
+                abierto = false;
+                
+            } else {
+                menuvertical.style.display = "block";
+                console.log(abierto);
+                abierto = true;
+            }
+        }
+
+    </script>
 
 </body>
 
