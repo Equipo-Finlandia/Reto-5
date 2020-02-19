@@ -63,7 +63,46 @@ function validaNombre() {
     }
 }
 		
-		
+//Función que valida la contraseña, admite letras y numeros sin espacios.
+function validaContrasena() {
+    var direccion = document.getElementById("pwd").value;
+    var etiqueta = document.getElementById("etiq_contrasena");
+    var formato = /^[A-Za-z0-9]+$/;
+	var fallo = document.createElement("div");
+	var textoer1 = document.createTextNode("Este campo es obligatorio");
+	var textoer2 = document.createTextNode("Contraseña no válida");
+	
+	function texto1(){
+		if(etiqueta.childNodes.length>1){
+			etiqueta.removeChild(etiqueta.lastChild);
+		}
+		etiqueta.appendChild(fallo);
+		fallo.style.color='#C51F5D';
+		fallo.appendChild(textoer1);
+	}
+	
+	function texto2(){
+		if(etiqueta.childNodes.length>1){
+			etiqueta.removeChild(etiqueta.lastChild);
+		}
+		etiqueta.appendChild(fallo);
+		fallo.style.color='#C51F5D';
+		fallo.appendChild(textoer2);
+	}
+	
+    if (direccion == null || direccion.length == 0) {
+        texto1();
+        return false;
+    }else if(!(formato.test(direccion))) {
+		texto2();
+		return false;
+	}else{
+		if(etiqueta.childNodes.length>1){
+			etiqueta.removeChild(etiqueta.lastChild);
+		}
+        return true;
+    }
+}		
 
 
 		
