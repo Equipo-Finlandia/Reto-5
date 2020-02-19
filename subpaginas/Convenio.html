@@ -3,14 +3,14 @@
 <head>
     <link rel="stylesheet" type="text/css" href="..\css\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="..\css\index.css">
+	<link rel="stylesheet" type="text/css" href="..\css\convenio.css">
     <script type="text/javascript" src="..\js\modoNoche.js"></script>
-    <script type="text/javascript" src="js\index.js"></script>
+    <script type="text/javascript" src="..\js\index.js"></script>
 </head>
 
 <body>
-    <div>
-        <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
-    </div>
+   <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
+
     <div id="menu">
         <nav>
             <ul id="menu_principal">
@@ -73,9 +73,7 @@
             </ul>
         </nav>
     </div>
-
-
-
+      
     <div id="encabezado">
         <div id="EncabezadoSegundaria">
             <a href="../index.html">
@@ -92,13 +90,13 @@
             <a href="formacion.html">
                 <div>Formacion</div>
             </a>
-            <a href="../index.html">
+            <a href="bolsaTrabajo.html">
                 <div style="width: 150;">Bolsas de trabajo</div>
             </a>
             <a href="contactanos.html">
                 <div>Contactanos</div>
             </a>
-            <a href="../index.html">
+            <a href="convenio.html">
                 <div>Convenios</div>
             </a>
             <a name="botonAcceso" href="javascript:cargaLogin();">
@@ -120,39 +118,125 @@
             <h1>Información sobre los convenios</h1>
             <hr>
         </div>
+		
+			  <div id="menu_registro" class="form-group">
+            <h1>Acceder</h1>
+            <form id="form_login" method="" action="php/login.php">
+                <label for="nombre">
+                    <p>Nombre de usuario:</p>
+                </label>
+                <input type="text" name="nombre" id="usr" class="form-control" placeholder="Usuario">
+                <label for="contraseña">
+                    <p>Contraseña:</p>
+                </label>
+                <input type="password" name="contrasena" id="pwd" class="form-control" placeholder="Contraseña">
+
+                <br />
+                <input type="submit" value="Iniciar Sesion" id="boton2">
+
+                <br />
+                <hr />
+            </form>
+            <h3>Aún no estás colegiado?</h3>
+            <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
+            <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
+        </div>
         <!--Primer noticia-->
         <div class="row">
-            
+            <h3>Alojamientos</h3>
             <div class="col-sm-4 noticias">
                 <img src="../imagenes/noticia.jpg" class="noticiaPng">
             </div>
             <div class="col-sm-8 noticias">
-                <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor
-                    sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet
-                    , lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum
-                    dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet
-                    , lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum
-                    dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet
+                <p> - Hoteles, hostales, hoteles-residencias, hostales-residencias, albergues, paradores, hoteles-apartamentos, residenciasapartamentos, moteles, ciudades de vacaciones y campings. <br>
+                    - Pensiones, fondas, casas de huéspedes y posadas. <br>
+                    - Restaurantes y cafeterías, siempre que se encuentren dentro del ámbito organizacional de la empresa afectada por este convenio. 
                 </p>
             </div>
         </div>
         <!--Segunda noticia-->
         <div class="row">
-            <h3>lorem ipsum dolor sit amet</h3>
+            <h3>Autoescuelas</h3>
             <div class="col-sm-4 noticias">
                 <img src="imagenes/noticia.jpg" class="noticiaPng">
             </div>
             <div class="col-sm-8 noticias">
-                <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor
-                    sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet
-                    , lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum
-                    dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet
-                    , lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum
-                    dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet
+                <p>Enseñanzas especializadas, denominadas Auto-Escuelas 
+                </p>
+            </div>
+        </div>
+        <!--Tercera noticia-->
+        <div class="row">
+            <h3>Hostelería</h3>
+            <div class="col-sm-4 noticias">
+                <img src="../imagenes/noticia.jpg" class="noticiaPng">
+            </div>
+            <div class="col-sm-8 noticias">
+                <p> - Restaurantes, casas de comidas, caterings y tabernas que sirvan comidas. <br>
+                    - Cafeterías, cafés-bares, bares y tabernas que no sirvan comidas. <br>
+                    - Hoteles, hostales, hoteles-residencias, hostales-residencias, albergues, paradores, hoteles-apartamentos y campings. <br>
+                    - Pensiones, fondas, casas de huéspedes y posadas. <br>
+                    - Chocolaterías, heladerías y salas de té. <br>
+                    - Salas de fiesta, discotecas, tablaos flamencos y salones de baile. <br>
+                    - Casinos. <br>
+                </p>
+            </div>
+        </div>
+        <!--Cuarta noticia-->
+        <div class="row">
+            <h3>Autoescuelas</h3>
+            <div class="col-sm-4 noticias">
+                <img src="imagenes/noticia.jpg" class="noticiaPng">
+            </div>
+            <div class="col-sm-8 noticias">
+                <p>Enseñanzas especializadas, denominadas Auto-Escuelas 
                 </p>
             </div>
         </div>
     </div>
+	
+
+    
+        <script>
+        function responsive(x) {
+
+            var menuvertical = document.getElementById("menu");
+
+
+            if (x.matches) { // si coincide con la resolución de ventana
+                
+                
+            } else {
+                
+                menuvertical.style.display = "none";
+                
+                
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 900px)")
+        responsive(x) // Llama al listener
+        x.addListener(responsive); //Vincula el listener al cambiar de estado
+
+        
+        //Funcion que "abre" el menu lateral
+        
+        var abierto = false;
+        function cargaMenu() {
+            var menuvertical = document.getElementById("menu");
+            if (abierto === true) {
+                menuvertical.style.display = "none";
+                console.log(abierto);
+                abierto = false;
+                
+            } else {
+                menuvertical.style.display = "block";
+                console.log(abierto);
+                abierto = true;
+            }
+        }
+
+    </script>
 
 </body>
 
