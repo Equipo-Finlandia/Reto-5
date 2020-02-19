@@ -1,6 +1,6 @@
 <html lang="es">
 <head>
-    <script type="text/javascript" src="../js/sesion.js"></script>
+<script type="text/javascript" src="../js/sesion.js"></script>
 <meta charset="UTF-8">
 <title> Iniciando sesion </title>
 </head>
@@ -70,12 +70,12 @@ margin-left:30%;
  if($row['nombre']==$nombre && $row['contrasena']==$contrase){
 	 echo "<h2><br> Has iniciado sesión correctamente!</h2>"; 
      echo "<br> Volviendo a inicio";
-      header("Refresh:5; URL=https://192.168.0.100/");
+ 	echo "<script>sesionCorrecto()</script>";
+  header("Refresh:5; URL=https://192.168.1.100/");
     
  }else{
      echo "<h2>Contraseña o usuario incorrectos</h2>";
  echo "<br> Volviendo a inicio";
-  header("Refresh:5; URL=https://192.168.0.100/");
  }
  mysqli_close($link);
 ?>
