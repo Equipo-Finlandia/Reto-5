@@ -117,16 +117,6 @@ h1 {
 
 /* menu izquierda  */
 
-li > ul {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 200px;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, .2);
-    -webkit-animation: aparecer .7s;
-    display: none;
-    margin-top: 0px;
-}
 
 ul {
     list-style: none;
@@ -177,25 +167,6 @@ label {
     margin: 0 0 5% 0;
 }
 
-
-.boton:hover {
-    left: 100%;
-    cursor: pointer;
-}
-
-.invisible {
-    left: -200px;
-}
-
-.derecha {
-    float: right;
-    line-height: 60px;
-}
-
-.principales {
-    margin-right: 10px;
-}
-
 #menu_principal li:hover > a,
 #menu_principal li:hover > label {
     color: #002f6c;
@@ -204,9 +175,6 @@ label {
     padding-left: 10px;
 }
 
-nav ul li:hover > ul {
-    display: inherit;
-}
 
 #botonMenu {
 
