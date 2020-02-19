@@ -21,15 +21,15 @@ function modoNoche(modoNull) { //recibir llamada, llamarlo como @modoNull
 	var contenedor = document.getElementById('contenedor');
 	var CTSPV = document.getElementById('CTSPV');
 	var linea = document.getElementsByTagName('hr');
-    //var form = document.getElementById('menu_registro');
+    var form = document.getElementById('menu_registro');
 	
 	if (this.modo=='negro') {//si @modo = 'negro', poner en negro
 		contenedor.style.backgroundColor = '#333333';
 		contenedor.style.color = '#cccccc';
 		body.style.backgroundColor = '#666666';
 		CTSPV.src = "imagenes/cebancNoche.png";
-      //form.style.color="#333333";
-      //form.style.backgroundColor ='#666666';
+      form.style.color="#333333";
+      form.style.backgroundColor ='#666666';
 		linea.style='border-color:white';
 
 
