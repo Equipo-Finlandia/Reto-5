@@ -84,8 +84,8 @@
             </a>
         </div>
         <div id="encabezadoPrincipal">
-            <a href="index.html">
-                <div>Colegiacion</div>
+            <a href="">
+                <div>NombreUsuario</div>
             </a>
             <a href="subpaginas/formacion.html">
                 <div>Formacion</div>
@@ -99,37 +99,13 @@
             <a href="subpaginas/convenio.html">
                 <div>Convenios</div>
             </a>
-            <a name="botonAcceso" href="javascript:cargaLogin();">
-                <div>Entrar</div>
-            </a>
+            
         </div>
     </div>
     <div id="contenedor">
         <a href="index.html"><img id="CTSPV" src="imagenes/cebanc.jpg"></a>
         <h1>Noticias</h1>
         <hr>
-        <div id="menu_registro" class="form-group">
-            <h1>Acceder</h1>
-            <form id="form_login" method="" action="php/login.php">
-                <label for="nombre">
-                    <p>Nombre de usuario:</p>
-                </label>
-                <input type="text" name="nombre" id="usr" class="form-control" placeholder="Usuario">
-                <label for="contraseña">
-                    <p>Contraseña:</p>
-                </label>
-                <input type="password" name="contrasena" id="pwd" class="form-control" placeholder="Contraseña">
-
-                <br />
-                <input type="submit" value="Iniciar Sesion" id="boton2">
-
-                <br />
-                <hr />
-            </form>
-            <h3>Aún no estás colegiado?</h3>
-            <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
-            <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
-        </div>
         <!--Primera noticia-->
         <div class="row">
             <h3>Los riesgos de "Crunch" laboral</h3>
@@ -145,7 +121,7 @@
         <div class="row">
             <h3>lorem ipsum dolor sit amet</h3>
             <div class="col-sm-4 noticias">
-                <img src="imagenes/noticia.jpg" class="noticiaPng">
+                <img src="imagenes/noticia.jpg" class="noticiaPng" alt="">
             </div>
             <div class="col-sm-8 noticias">
                 <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet
@@ -154,10 +130,6 @@
                 </p>
             </div>
         </div>
-        <div id="acceso">
-            <input type="button" value="Acceder" name="botonAcceso" id="boton1" onClick="cargaLogin()">
-        </div>
-
     </div>
 
     <script>
@@ -166,7 +138,6 @@
         function responsive(resolucion) {
 
             var menuvertical = document.getElementById("menu");
-
 
             if (resolucion.matches) { // si coincide con la resolución de ventana
 
