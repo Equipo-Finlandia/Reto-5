@@ -14,6 +14,8 @@
             menuReg.style.display = "none";
         }
 
+//Funcion que valida el nombre al iniciar sesion
+//Formato que admite solo letras.
 function validaNombre() {
 
     var nombre = document.getElementById("usr").value;
@@ -72,6 +74,11 @@ function validaContrasena() {
 	var textoer1 = document.createTextNode("Este campo es obligatorio");
 	var textoer2 = document.createTextNode("Contraseña no válida");
 	
+	    //Estas dos funciones sirven para crear y/o modificar el nodo hijo 
+    //de las etiquetas mostrando un mensaje en rojo.
+    //El mensaje cambiará dependiendo de si el campo quedó vacío
+    //o si se introdujo información no válida.
+	
 	function texto1(){
 		if(etiqueta.childNodes.length>1){
 			etiqueta.removeChild(etiqueta.lastChild);
@@ -103,10 +110,6 @@ function validaContrasena() {
         return true;
     }
 }		
-
-
-		
-		
 		
 			//Listener y función que recoge las distintas opciones de accesibilidad
 			//para favorecer la legibilidad.
@@ -133,4 +136,6 @@ function validaContrasena() {
 		  }
 	}
 
+//Menu popup lateral?
+//Deshabilitar accessibilidad onfocus login?
 
