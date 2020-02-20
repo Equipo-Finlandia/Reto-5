@@ -261,3 +261,9 @@ label {
     }
 
 }
+
+/*Para los anonimos, no muestre los siguentes*/
+#formacion, #colegiacion{
+    display:none;
+}
+

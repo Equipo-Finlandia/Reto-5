@@ -1,5 +1,6 @@
 var modo=localStorage.getItem('modo');//crear variable modo y almacenarlo en local.
 //este script contiene dos Funcion, uno se ejecuta al cargarse la Página(windows.onload) y otro al dar boton luna (function modoNoche) 
+var sesion=localStorage.getItem('sesion');
 
 window.onload=function(){
 	//comprobar si @modo tiene valor, si no tiene, asignarlo a 'blanco'
@@ -13,6 +14,24 @@ window.onload=function(){
 		localStorage.setItem('modo','negro');// almacenar modo='negro' a local
 		console.log(this.modo);
 	}
+	// Comprobar sesion
+	var formacion = document.getElementById("formacion");
+	var acceder = document.getElementById("acceder");
+	var colegiacion = document.getElementById("colegiacion");
+	
+    console.log(this.sesion);
+    if (this.sesion==null || this.sesion=='0'){
+        console.log("no hay sesion");
+        formacion.style.display= 'none';
+        colegiacion.style.display= 'none';
+    	acceder.style.display= 'block';
+    }
+	if(this.sesion=='1'){
+    	console.log("sesion correcto");
+        formacion.style.display= 'block';
+        colegiacion.style.display= 'block';
+    	acceder.style.display= 'none';
+    }
 	modoNoche(this.modo);//mandar @modo a function()
 }
 
@@ -22,8 +41,6 @@ function modoNoche(modoNull) { //recibir llamada, llamarlo como @modoNull
 	var CTSPV = document.getElementById('CTSPV');
 	var linea = document.getElementsByTagName('hr');
     var form = document.getElementById('menu_registro');
-	var etiq_nombre = document.getElementById("etiq_nombre");
-	var etiq_pass = document.getElementById("etiq_contrasena");
 	
 	if (this.modo=='negro') {//si @modo = 'negro', poner en negro
 		contenedor.style.backgroundColor = '#333333';
@@ -33,8 +50,6 @@ function modoNoche(modoNull) { //recibir llamada, llamarlo como @modoNull
         form.style.color="#ffffff";
         form.style.backgroundColor ='#243447';
 		linea.style='border-color:white';
-		etiq_nombre.style.color="#ffffff";
-		etiq_pass.style.color="#ffffff";
 
 		this.modo='blanco'; //cambiar @modo a 'blanco', así siguiente vez que ejecute se va ver HTML en blanco
 	}else{//si @modo = 'blanco', poner en blanco
@@ -44,8 +59,6 @@ function modoNoche(modoNull) { //recibir llamada, llamarlo como @modoNull
 		CTSPV.src = "imagenes/cebanc.jpg";
         form.style.color="black";
         form.style.backgroundColor="white";
-		etiq_nombre.style.color='black';
-		etiq_pass.style.color='black';
     
 		this.modo='negro';//cambiar @modo a 'blanco', así siguiente vez que ejecute se va ver HTML en negro
 	}
@@ -61,4 +74,10 @@ function modoNoche(modoNull) { //recibir llamada, llamarlo como @modoNull
 			localStorage.setItem('modo','negro');//guardar @modo='blanco' en local
 		}
 	}//Hasí hace que cuando cambia de página, se mantiene el modo que tenía.
+}
+
+function sesionCorrecto(){
+	this.sesion='1';
+    localStorage.setItem('sesion','1');
+    console.log(this.sesion);
 }
