@@ -2,7 +2,7 @@
 function validaNombre() {
 
     var nombre = document.getElementById("nombre").value;
-    var etiqueta = document.getElementById("etiq_nombre");
+    var etiqueta = document.getElementById("etiq_reg_nombre");
     var fallo = document.createElement("div");
     var textoer1 = document.createTextNode('Este campo es obligatorio');
     var textoer2 = document.createTextNode('Nombre no válido')
@@ -151,7 +151,7 @@ function validaApellido2() {
 //Función que valida la contraseña, admite letras y numeros sin espacios.
 function validaContrasena() {
     var direccion = document.getElementById("pass").value;
-    var etiqueta = document.getElementById("etiq_contrasena");
+    var etiqueta = document.getElementById("etiq_reg_contrasena");
     var formato = /^[A-Za-z0-9]+$/;
 	var fallo = document.createElement("div");
 	var textoer1 = document.createTextNode("Este campo es obligatorio");

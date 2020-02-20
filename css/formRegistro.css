@@ -1,3 +1,4 @@
+/*Titulo tipo h2*/
 h2 {
     width: 1024px;
     padding: 10 20 10 20;
@@ -6,31 +7,86 @@ h2 {
     color: white;
 }
 
-
+/*formulario de registro*/
 #formulario {
     width: 650px;
     border: 2px solid red;
     padding: 20px;
-    background-color:bisque;
+    background-color: bisque;
     column-count: 2;
     margin: 0 auto;
-    margin-top:50px;
-}
-form{
-    margin:0  auto;
+    margin-top: 50px;
 }
 
-#form1{
-    margin-left:10px;
-    margin-top:10px;
+
+/*Columna izquierda del formulario*/
+#form1 {
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
-#form2{
-    margin-top:66px;
-    margin-left:50px;
+/*Columna derecha del formulario*/
+#form2 {
+    margin-top: 66px;
+    margin-left: 50px;
 }
 
-#boton2{
-    
-    margin-left:-100px;
+/*Boton de envío de formulario de registro*/
+#botonEnviar {
+    margin-left: -100px;
+    width: 120px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #ef0000;
+    color: white;
+    border: none;
+}
+
+#botonEnviar:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width:900px) {
+
+    /*pop-up de menu de inicio de sesion y registro*/
+    #menu_registro {
+        margin-left: 20%;
+    }
+
+    /*Formulario de registro*/
+    #formulario {
+        margin-left: 10%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    /*Formulario de registro*/
+    #formulario {
+        margin-left: 0;
+        width: 500px;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    /*Columna izquierda del formulario*/
+    #form1 {
+        margin-left: 6px;
+    }
+
+    /*Columna derecha del formulario*/
+    #form2 {
+        margin-left: -10px;
+    }
+
+    /*pop-up de menu de inicio de sesion y registro*/
+    #menu_registro {
+        margin-left: 5%;
+    }
+
 }
