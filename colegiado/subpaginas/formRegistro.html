@@ -1,0 +1,187 @@
+<html lang="es">
+
+<head>
+    <title>Registro</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="..\css\bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="..\css\index.css">
+    <link rel="stylesheet" type="text/css" href="..\css\formRegistro.css">
+    <script type="text/javascript" src="..\js\validaFormulario.js"></script>
+</head>
+
+<body>
+    
+     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
+
+    <div id="menu">
+        <nav>
+            <ul id="menu_principal">
+                <li><a href="#">🏠 Inicio</a></li>
+                <li>
+                    <label for="submenu1">
+                        🏫 Colegio
+                    </label>
+                    <ul>
+                        <li><a href="paginas/quienes.html">🏫 ¿Quiénes somos?</a></li>
+                        <li><a href="paginas/historia.html">📜 Historia</a></li>
+                        <li><a href="paginas/contactanos.html">☎️ Contactanos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="submenu2">
+                        🤝 Convenios
+                    </label>
+                    <ul>
+                        <li><a href="paginas/conquien.html">❓¿Con quién?</a></li>
+                        <li><a href="paginas/cuando.html">🕔 ¿Desde cuándo?</a></li>
+                        <li><a href="paginas/enlaces.html">🌐 Enlaces</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="submenu3">
+                        🎓 Colegiación
+                    </label>
+                    <ul>
+                        <li><a href="paginas/razones.html">👍 Razones</a></li>
+                        <li><a href="paginas/requisitos.html">✅ Requisitos</a></li>
+                        <li><a href="paginas/inscripcion.html">🖊️ Inscripción</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="submenu4">
+                        📑 Modelos de contrato
+                    </label>
+                    <ul>
+                        <li><a href="paginas/temporal.html">⌚ Temporal</a></li>
+                        <li><a href="paginas/indefinido.html">⌚ Indefinido</a></li>
+                        <li><a href="paginas/practicas.html">⌚ Prácticas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="submenu5">
+                        🖥️ Formación
+                    </label>
+                    <ul>
+                        <li><a href="paginas/cusos.html">📋 Cursos</a></li>
+                        <li><a href="paginas/seminarios.html">🏛️ Seminarios</a></li>
+                        <li><a href="paginas/charlas.html">🗣️ Charlas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="submenu6">
+                        💰 Bolsa de empleo
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div id="encabezado">
+        <a href="../index.html">
+            <div>Colegiacion</div>
+        </a>
+        <a href="formacion.html">
+            <div>Formacion</div>
+        </a>
+        <a href="bolsaTrabajo.html">
+            <div style="width: 150;">Bolsas de trabajo</div>
+        </a>
+        <a href="contactanos.html">
+            <div>Contactanos</div>
+        </a>
+        <a href="convenio.html">
+            <div>Convenios</div>
+         </a>
+           <a name="botonAcceso" href="javascript:cargaLogin();">
+             <div>Entrar</div>
+         </a>
+    </div>
+    <div id="contenedor">
+        <img id="CTSPV" src="../imagenes/cebanc.jpg" alt="logotipo del colegio">
+
+        <h2>Formulario de Registro</h2>
+
+        <div id="formulario">
+            <form method="post" action="../php/registro.php">
+                <div id="form1">
+                    <br />
+                    <legend>Formulario de Registro</legend>
+                    <label for="nombre" id="etiq_nombre">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" onfocusout="validaNombre()"><br />
+
+                    <label for="apell1" id="etiq_apellido1">Apellido 1: </label>
+                    <input type="text" id="apell1" name="apell1" placeholder="Apellido 1" onfocusout="validaApellido1()"><br />
+
+                    <label for="apell2" id="etiq_apellido2">Apellido 2: </label>
+                    <input type="text" id="apell2" name="apell2" placeholder="Apellido 2" onfocusout="validaApellido2()"><br />
+
+                    <label for="pass" id="etiq_contrasena">Contraseña: </label>
+                    <input type="password" id="pass" name="pass" placeholder="Contraseña" onfocusout="validaContrasena()"><br />
+
+                    <label for="pass2" id="etiq_contrasena2">Repetir contraseña: </label>
+                    <input type="password" id="pass2" name="pass2" placeholder="Repetir Contraseña" onfocusout="comparaContrasena()"><br />
+                </div>
+
+                <div id="form2">
+                    <br /><br /><br /><br />
+                    <label for="dni" id="etiq_dni">DNI: </label>
+                    <input type="text" id="dni" name="dni" placeholder="DNI" onfocusout="validaDNI()"><br />
+                    <label for="centroacadem" id="etiq_centro">Centro Academico: </label>
+                    <input type="text" id="centroacadem" name="centro" placeholder="Centro Academico" onfocusout="validaCentro()"><br />
+                    <label for="direccion" id="etiq_direccion">Direccion: </label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Dirección" onfocusout="validaDireccion()"><br />
+                    <label for="titulacion" id="etiq_titulacion">Titulacion: </label>
+                    <input type="text" id="titulacion" name="titulacion" placeholder="Titulación" onfocusout="validaTitulacion()"><br />
+                    <label for="telefono" id="etiq_telefono">Telefono: </label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono" onfocusout="validaTelefono()"><br />
+                </div>
+                <br /><br />
+                <input type="submit" value="Enviar" id="boton2">
+            </form>
+        </div>
+    </div>
+    
+        <script>
+        function responsive(x) {
+
+            var menuvertical = document.getElementById("menu");
+
+
+            if (x.matches) { // si coincide con la resolución de ventana
+                
+                
+            } else {
+                
+                menuvertical.style.display = "none";
+                
+                
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 900px)")
+        responsive(x) // Llama al listener
+        x.addListener(responsive); //Vincula el listener al cambiar de estado
+
+        
+        //Funcion que "abre" el menu lateral
+        
+        var abierto = false;
+        function cargaMenu() {
+            var menuvertical = document.getElementById("menu");
+            if (abierto === true) {
+                menuvertical.style.display = "none";
+                console.log(abierto);
+                abierto = false;
+                
+            } else {
+                menuvertical.style.display = "block";
+                console.log(abierto);
+                abierto = true;
+            }
+        }
+
+    </script>
+    
+</body>
+
+</html>

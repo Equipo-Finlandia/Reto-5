@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Recetas de cocina</title>
+</head>
+<body>
+  <h1>Mis recetas de cocina</h1>
+  <h2>
+ <a href="rec/polloallimon.html">Pollo al limón</a>
+  </h2>
+  <div>3 febrero 2015</div>
+  <p>
+  <img alt="Pollo al limon" src="polloallimon.jpg" />
+  Para preparar esta receta los ingredientes son ...
+  </p>
+
+  <h2>
+    <a href="rec/albondigas.html">Albondigas con tomate</a>
+  </h2>
+  <div>25 enero 2015</div>
+  <p>
+  <img alt="Albondigas con tomate" src="albondigas.jpg" />
+  Para preparar esta receta los ingredientes son ...
+  </p>
+
+  <h2>
+    <a href="rec/paella.html">Paella Valenciana</a>
+  </h2>
+  <div>13 enero 2015</div>
+  <p>
+  <img alt="Paella" src="paella.jpg" />
+  Para preparar esta receta los ingredientes son ...
+  </p>
+</body>
+</html>

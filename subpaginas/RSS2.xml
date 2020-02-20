@@ -1,0 +1,17 @@
+<rss version="2.0">
+    <channel>
+        <title>RRS del Colegio de Tecnicos Superiores Informaticos del Pais Vasco</title>
+        <link>poner link</link>
+        <description>Noticias del Coelgio de Tecnicos Superiores Informaticos del Pais Vasco</description>
+            <item>
+                <title>Noticias de actualiad</title>
+                <link>poner el link</link>
+                <description>noticia 1</description>
+            </item>
+            <item>
+                <title>Noticias de actualiad</title>
+                <link>poner el link</link>
+                <description>noticia 2</description>
+            </item>
+    </channel>
+</rss>

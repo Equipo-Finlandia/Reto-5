@@ -1,18 +1,16 @@
-<html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="..\css\bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="..\css\index.css">
-    <link rel="stylesheet" type="text/css" href="..\css\bolsa.css">
-    <script type="text/javascript" src="..\js\modoNoche.js"></script>
-    <script type="text/javascript" src="..\js\index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css\index.css">
+    <script type="text/javascript" src="js\index.js"></script>
+    <script type="text/javascript" src="js\modoNoche.js"></script>
 </head>
 
 <body>
+
     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
-    
-    <a id="RSS" href="RSS2.xml"><img src="imagenes/rss.jpg" alt="Boton RSS"> </a>
 
     <div id="menu">
         <nav>
@@ -76,12 +74,9 @@
             </ul>
         </nav>
     </div>
-
-
-
     <div id="encabezado">
         <div id="EncabezadoSegundaria">
-            <a href="../index.html">
+            <a href="index.html">
                 <div>🌍</div>
             </a>
             <a id="activarNoche" href="javascript:modoNoche();">
@@ -89,28 +84,30 @@
             </a>
         </div>
         <div id="encabezadoPrincipal">
-            <a id="colegiacion"href="index.html">
+            <a href="index.html">
                 <div>Colegiacion</div>
             </a>
-            <a id="formacion"href="formacion.html">
+            <a href="subpaginas/formacion.html">
                 <div>Formacion</div>
             </a>
-            <a href="bolsaTrabajo.html">
+            <a href="subpaginas/bolsaTrabajo.html">
                 <div style="width: 150;">Bolsas de trabajo</div>
             </a>
-            <a href="contactanos.html">
+            <a href="subpaginas/contactanos.html">
                 <div>Contactanos</div>
             </a>
-            <a href="convenio.html">
+            <a href="subpaginas/convenio.html">
                 <div>Convenios</div>
             </a>
-            <a id="acceder" name="botonAcceso" href="javascript:cargaLogin();">
-                <div>Acceder</div>
+            <a name="botonAcceso" href="javascript:cargaLogin();">
+                <div>Entrar</div>
             </a>
         </div>
     </div>
     <div id="contenedor">
-        <a href="../index.html"><img id="CTSPV" src="../imagenes/cebanc.jpg"></a>
+        <a href="index.html"><img id="CTSPV" src="imagenes/cebanc.jpg"></a>
+        <h1>Noticias</h1>
+        <hr>
         <div id="menu_registro" class="form-group">
             <h1>Acceder</h1>
             <form id="form_login" method="" action="php/login.php">
@@ -133,108 +130,87 @@
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
-
-
-        <h1>Bolsa de Trabajo</h1>
-        <hr>
-        <!--Primera oferta-->
+        <!--Primera noticia-->
         <div class="row">
-            <h3>Tecnico de sistemas</h3>
-
+            <h3>Los riesgos de "Crunch" laboral</h3>
             <div class="col-sm-4 noticias">
-                <img src="../subpaginas/imagenes/tecnico.jpg" class="noticiaPng">
+                <img src="imagenes/trabajador.jpg" class="noticiaPng" alt="programador en oficina">
             </div>
             <div class="col-sm-8 noticias">
-                <p>Estamos buscando una persona con conocimientos informáticos para incorporarse de manera inmediata a nuestro equipo en el departamento de soporte. No es necesaria experiencia previa, pero es indispensable un buen nivel de inglés (tanto hablado como escrito).
+                <p>Se entiende por crunch aquellos periodos en los que los programadores y desarrolladores trabajan por encima de las horas estipuladas, normalmente para llegar a tiempo a una fecha acordada de entrega. Dichos periodos normalmente duran una semana o dos, pero en algunos casos pueden alargarse durante meses.
                 </p>
-
-                <p>Ofrecemos la posibilidad de formar parte de una empresa con amplia presencia internacional, en constante crecimiento y con experiencia en el sector, en la que recibirás toda la formación necesaria y podrás desarrollar tu carrera profesional.
-                </p>
-
-                <p>Su principal cometido será la asistencia técnica y ayuda (de manera remota) en el uso de nuestros productos de software a nuestros clientes de diferentes países.
-                </p>
-
-                <a>link para pdf</a>
             </div>
         </div>
-
-        <!--Segunda oferta-->
+        <!--Segunda noticia-->
         <div class="row">
-            <h3>Tecnico de sistemas</h3>
+            <h3>lorem ipsum dolor sit amet</h3>
             <div class="col-sm-4 noticias">
-                <img src="../subpaginas/imagenes/tecnico2.png" class="noticiaPng">
+                <img src="imagenes/noticia.jpg" class="noticiaPng">
             </div>
             <div class="col-sm-8 noticias">
-                <p>Empresa especializada en sistemas de seguridad precisa incorporar técnicos / oficiales de sistemas de seguridad para desempeñar funciones de instalación, puesta en marcha, mantenimiento y configuración de sistemas anti-intrusión, CCTV, control de acceso, sistemas antihurto y PCI.
+                <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet
+                    , lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet
+                    , lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet
                 </p>
-                <p>Con conocimientos necesarios de CCTV, Control de accesos, VMS, Integración de sistemas, Configuración de redes, Configuración de Sistemas, Asistencia técnica.
-                </p>
-
-                <a>link para pdf</a>
             </div>
         </div>
-
-        <!--Tercera oferta-->
-        <div class="row">
-            <h3>Programador</h3>
-            <div class="col-sm-4 noticias">
-                <img src="../subpaginas/imagenes/programador.jpg" class="noticiaPng">
-            </div>
-            <div class="col-sm-8 noticias">
-                <p>Estamos seleccionando un Programador Senior Java EE con buenos conocimientos en SQL, para contratación directa en uno de nuestros clientes más importantes.
-                </p>
-                <p>Tipo de industria de la oferta:</p>
-
-                <p>Servicios y tecnología de la información</p>
-
-                <p>Categoría:</p>
-
-                <p>Informática y telecomunicaciones - Programación</p>
-
-                <a>link para pdf</a>
-            </div>
+        <div id="acceso">
+            <input type="button" value="Acceder" name="botonAcceso" id="boton1" onClick="cargaLogin()">
         </div>
+
     </div>
 
     <script>
-        function responsive(x) {
+        
+        
+        function responsive(resolucion) {
 
             var menuvertical = document.getElementById("menu");
 
 
-            if (x.matches) { // si coincide con la resolución de ventana
-
+            if (resolucion.matches) { // si coincide con la resolución de ventana
 
             } else {
-
                 menuvertical.style.display = "none";
-
-
+                abierto=false;
+                 console.log(abierto);
             }
         }
 
-        var x = window.matchMedia("(max-width: 900px)")
-        responsive(x) // Llama al listener
-        x.addListener(responsive); //Vincula el listener al cambiar de estado
+        var resolucion = window.matchMedia("(max-width: 900px)");
+        responsive(resolucion); // Llamada al listener y le pasa como parametro la variable resolucion
+        resolucion.addListener(responsive); //Vincula el listener al cambiar de resolución la ventana
 
 
-        //Funcion que "abre" el menu lateral
-
-        var abierto = false;
-
+       
+        //Variable booleana que se encarga de almacenar el estado del menu lateral, si está abierto o no.
+        var abierto=false;
+         //Funcion que se encarga de mostrar el menu lateral
         function cargaMenu() {
             var menuvertical = document.getElementById("menu");
-            if (abierto === true) {
+            
+            if (abierto == true) {
                 menuvertical.style.display = "none";
                 console.log(abierto);
                 abierto = false;
-
             } else {
                 menuvertical.style.display = "block";
-                console.log(abierto);
+                console.log("abierto = " +abierto);
                 abierto = true;
             }
         }
+
+        var contenedor = document.getElementById("contenedor");
+        //Listener que queda a la escucha de si se hace click en el body, al tener el menu lateral abierto y lo oculta
+        contenedor.addEventListener("click", cierraMenu, true);
+
+        function cierraMenu() {
+            var menuvert = document.getElementById("menu");
+
+           menuvert.style.display = "none";
+           abierto=false;
+        }
+
 
     </script>
 
