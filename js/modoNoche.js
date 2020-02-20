@@ -23,12 +23,12 @@ window.onload=function(){
     if (this.sesion==null || this.sesion=='0'){
         console.log("no hay sesion");
         formacion.style.display= 'none';
-        colegiacion.style.display= 'none';
+        colegiacion.style.display= 'block';
     	acceder.style.display= 'block';
     }
 	if(this.sesion=='1'){
     	console.log("sesion correcto");
-        formacion.style.display= 'block';
+        formacion.style.display= 'none';
         colegiacion.style.display= 'block';
     	acceder.style.display= 'none';
     }
