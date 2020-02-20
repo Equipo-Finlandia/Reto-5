@@ -5,6 +5,7 @@ body {
 
 #CTSPV {
     margin-top: 40px;
+    border-bottom: 1px solid #AA1111;
 }
 
 #contenedor {
@@ -38,7 +39,7 @@ h1 {
     text-align: center;
     padding-top: 10px;
     font-size: 14px;
-    color: blue;
+    color: #AA1111;
     font-weight: 700;
     font-family: Arial;
 }
@@ -54,7 +55,7 @@ h1 {
     width: 120px;
     height: 30px;
     border-radius: 50px;
-    background-color: #ef0000;
+    background-color: #AA1111;
     color: white;
     border: none;
 }
@@ -103,7 +104,7 @@ h1 {
     width: 90px;
     height: 30px;
     border-radius: 50px;
-    background-color: #ef0000;
+    background-color: #AA1111;
     color: white;
     border: none;
 }
@@ -113,6 +114,12 @@ h1 {
     border: 2px solid white;
     border-bottom: 2px solid gray;
     cursor: pointer;
+}
+
+/*Opción del menu de la pagina activa*/
+#activo {
+    background-color: #EBEBEB;
+    border-bottom: 1px solid #AA1111;
 }
 
 /* menu izquierda  */
@@ -143,7 +150,7 @@ ul {
 
 #menu_principal a,
 label {
-    color: blue;
+    color: #AA1111;
     display: block;
     padding-left: 25px;
     text-decoration: none;
@@ -185,7 +192,9 @@ label {
     position: absolute;
     z-index: 6;
     display: none;
-    position:fixed;
+    position: fixed;
+    border-radius: 5px;
+    box-shadow: 2px 2px gray;
 }
 
 /* Ocular  y mostrar menu horizontal y vertical*/
@@ -217,10 +226,10 @@ label {
 
 @media screen and (max-width:900px) {
 
-       #botonMenu {
-        display:block;
+    #botonMenu {
+        display: block;
     }
-    
+
     #encabezado {
         display: none;
     }
@@ -246,7 +255,7 @@ label {
 
 @media screen and (max-width:600px) {
 
-    
+
     #CTSPV {
         width: 500px;
     }
@@ -263,7 +272,7 @@ label {
 }
 
 /*Para los anonimos, no muestre los siguentes*/
-#formacion, #colegiacion{
-    display:none;
+#formacion,
+#colegiacion {
+    display: none;
 }
-

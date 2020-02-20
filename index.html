@@ -12,38 +12,36 @@
 
     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
 
-    <div id="menu">
+   <div id="menu">
         <nav>
             <ul id="menu_principal">
-                <li><a href="#">🏠 Inicio</a></li>
+                <li id="activo">
+                    <a href="index.html">➥🏠 Inicio</a>
+                </li>
+
                 <li>
                     <label for="submenu1">
-                        🏫 Colegio
+                        <a href="subpaginas/contactanos.html">🏫 Contáctanos</a>
                     </label>
                 </li>
                 <li>
                     <label for="submenu2">
-                        🤝 Convenios
+                        <a href="subpaginas/Convenio.html">🤝 Convenios</a>
                     </label>
                 </li>
                 <li>
-                    <label for="submenu3">
-                        🎓 Colegiación
-                    </label>
-                </li>
-                <li>
-                    <label for="submenu4">
-                        📑 Modelos de contrato
+                    <label  for="submenu3">
+                        <a href="subpaginas/formRegistro.html">🎓 Colegiación</a>
                     </label>
                 </li>
                 <li>
                     <label for="submenu5">
-                        🖥️ Formación
+                        <a href="subpaginas/formacion.html">🖥️ Formación</a>
                     </label>
                 </li>
                 <li>
                     <label for="submenu6">
-                        💰 Bolsa de empleo
+                        <a href="subpaginas/bolsaTrabajo.html">💰 Bolsa de empleo</a>
                     </label>
                 </li>
             </ul>
@@ -52,8 +50,8 @@
     <!--Menu horizontal superior-->
     <div id="encabezado">
         <div id="EncabezadoSegundaria">
-            <a href="index.html">
-                <div>🏠 </div>
+            <a href="index.html" > 
+                <div id="activo">🏠 </div>
             </a>
             <a id="activarNoche" href="javascript:modoNoche();">
                 <div>🌙</div>
@@ -61,7 +59,7 @@
         </div>
 
         <div id="encabezadoPrincipal">
-            <a id="colegiacion"href="index.html">
+            <a id="colegiacion" href="subpaginas/formRegistro.html">
                 <div>Colegiacion</div>
             </a>
             <a id="formacion"href="subpaginas/formacion.html">
@@ -83,7 +81,7 @@
     </div>
     <div id="contenedor">
         <!--Contenedor que recoge el contenido y el menu de inicio de sesion-->
-        <a href="index.html"><img id="CTSPV" src="imagenes/cebanc.jpg"></a>
+        <a href="index.html"><img id="CTSPV" src="imagenes/cebanc.jpg" alt="logo del colegio"></a>
         <h1>Noticias</h1>
         <hr>
         <div id="menu_registro" class="form-group">
@@ -92,11 +90,11 @@
                 <label for="nombre" id="etiq_nombre">
                     <p>Nombre de usuario:</p>
                 </label>
-                <input type="text" name="nombre" id="usr" class="form-control" placeholder="Usuario" onfocusout="validaNombre()">
+                <input type="text" name="nombre" id="usr" class="form-control" placeholder="Usuario" onfocusout="validaNombreInicio()">
                 <label for="contraseña" id="etiq_contrasena">
                     <p>Contraseña:</p>
                 </label>
-                <input type="password" name="contrasena" id="pwd" class="form-control" placeholder="Contraseña" onfocusout="validaContrasena()">
+                <input type="password" name="contrasena" id="pwd" class="form-control" placeholder="Contraseña" onfocusout="validaContrasenaInicio()">
 
                 <br />
                 <input type="submit" value="Iniciar Sesion" id="boton2">

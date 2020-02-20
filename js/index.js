@@ -16,7 +16,7 @@
 
 //Funcion que valida el nombre al iniciar sesion
 //Formato que admite solo letras.
-function validaNombre() {
+function validaNombreInicio() {
 
     var nombre = document.getElementById("usr").value;
     var etiqueta = document.getElementById("etiq_nombre");
@@ -66,7 +66,7 @@ function validaNombre() {
 }
 		
 //Función que valida la contraseña, admite letras y numeros sin espacios.
-function validaContrasena() {
+function validaContrasenaInicio() {
     var direccion = document.getElementById("pwd").value;
     var etiqueta = document.getElementById("etiq_contrasena");
     var formato = /^[A-Za-z0-9]+$/;
