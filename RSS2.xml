@@ -1,6 +1,10 @@
-<rss version="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
     <channel>
-        <title>RRS del Colegio de Tecnicos Superiores Informaticos del Pais Vasco</title>
+        <title>
+          <langstring xml:lang="es">
+                RRS del Colegio de Tecnicos Superiores Informaticos del Pais Vasco
+          </langstring>
+       </title>
         <link>poner link</link>
         <description>Noticias del Coelgio de Tecnicos Superiores Informaticos del Pais Vasco</description>
             <item>
@@ -14,4 +18,3 @@
                 <description>noticia 2</description>
             </item>
     </channel>
-</rss>
