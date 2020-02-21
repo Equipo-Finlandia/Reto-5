@@ -28,7 +28,7 @@ window.onload=function(){
     }
 	if(this.sesion=='1'){
     	console.log("sesion correcto");
-        formacion.style.display= 'none';
+        formacion.style.display= 'block';
         colegiacion.style.display= 'block';
     	acceder.style.display= 'none';
     }
