@@ -132,6 +132,57 @@
             </div>
         </div>
     </div>
+    
+        <script>
+        function responsive(x) {
+
+            var menuvertical = document.getElementById("menu");
+
+
+            if (x.matches) { // si coincide con la resolución de ventana
+
+
+            } else {
+
+                menuvertical.style.display = "none";
+
+
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 900px)")
+        responsive(x) // Llama al listener
+        x.addListener(responsive); //Vincula el listener al cambiar de estado
+
+
+        //Funcion que "abre" el menu lateral
+
+        var abierto = false;
+
+        function cargaMenu() {
+            var menuvertical = document.getElementById("menu");
+            if (abierto === true) {
+                menuvertical.style.display = "none";
+                console.log(abierto);
+                abierto = false;
+
+            } else {
+                menuvertical.style.display = "block";
+                console.log(abierto);
+                abierto = true;
+            }
+        }
+        var contenedor = document.getElementById("contenedor");
+        //Listener que queda a la escucha de si se hace click en el body, al tener el menu lateral abierto y lo oculta
+        contenedor.addEventListener("click", cierraMenu, true);
+
+        function cierraMenu() {
+            var menuvert = document.getElementById("menu");
+
+            menuvert.style.display = "none";
+            abierto = false;
+        }
+    </script>
 
 </body>
 
