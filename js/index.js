@@ -67,7 +67,7 @@ function validaNombreInicio() {
 		
 //Función que valida la contraseña, admite letras y numeros sin espacios.
 function validaContrasenaInicio() {
-    var direccion = document.getElementById("pwd").value;
+    var contrasena = document.getElementById("pwd").value;
     var etiqueta = document.getElementById("etiq_contrasena");
     var formato = /^[A-Za-z0-9]+$/;
 	var fallo = document.createElement("div");
@@ -97,10 +97,10 @@ function validaContrasenaInicio() {
 		fallo.appendChild(textoer2);
 	}
 	
-    if (direccion == null || direccion.length == 0) {
+    if (contrasena == null || contrasena.length == 0) {
         texto1();
         return false;
-    }else if(!(formato.test(direccion))) {
+    }else if(!(formato.test(contrasena))) {
 		texto2();
 		return false;
 	}else{
@@ -111,31 +111,33 @@ function validaContrasenaInicio() {
     }
 }		
 		
-			//Listener y función que recoge las distintas opciones de accesibilidad
-			//para favorecer la legibilidad.
+	
+
+
+
+	//Listener y función que recoge las distintas opciones de accesibilidad
+	//para favorecer la legibilidad.
 	window.addEventListener("keydown", aumentaLetra)
 	var tam = 14;
 	var grosor = 500;
 	function aumentaLetra(event){
 		var texto = document.getElementById("contenedor");
 		
-		  if (event.key == "q"){
+		  if (event.key == "." && tam<25){
 			  tam++;
 			  texto.style.fontSize=tam+"px";
-		  } else if (event.key=="w" && tam>10){
+		  } else if (event.key=="," && tam>10){
 			  tam--;
 			  texto.style.fontSize=tam+"px";
 			  
-		  } else if (event.key=="e" && grosor==800){
+		  } else if (event.key=="-" && grosor==800){
 			  grosor=600;
 			  texto.style.fontWeight=grosor;
 			  
-		  } else if (event.key=="e" && grosor<=600){
+		  } else if (event.key=="-" && grosor<=600){
 			  grosor=800;
 			  texto.style.fontWeight=grosor;
 		  }
 	}
 
-//Menu popup lateral?
-//Deshabilitar accessibilidad onfocus login?
 

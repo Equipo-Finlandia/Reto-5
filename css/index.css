@@ -3,6 +3,7 @@ body {
     background-size: 100% auto;
 }
 
+/*Contenedor de la imagen y logotipo superior*/
 #CTSPV {
     margin-top: 40px;
     border-bottom: 1px solid #AA1111;
@@ -15,6 +16,7 @@ body {
     box-shadow: 0px 0px 20px gray;
 }
 
+/*Ocultar barra de desplazamiento lateral*/
 ::-webkit-scrollbar {
     display: none;
 }
@@ -34,6 +36,7 @@ h1 {
     z-index: 900;
 }
 
+/*principal: Botones con texto || secundario: Botones con icono*/
 #encabezadoPrincipal div,
 #encabezadoSegundaria div {
     text-align: center;
@@ -50,6 +53,7 @@ h1 {
     width: 100px;
 }
 
+/*Boton login*/
 #boton2 {
     margin-top: 20px;
     width: 120px;
@@ -58,11 +62,6 @@ h1 {
     background-color: #AA1111;
     color: white;
     border: none;
-}
-
-#boton2:hover {
-    border: 1px solid black;
-    cursor: pointer;
 }
 
 #encabezado a div:hover {
@@ -78,6 +77,8 @@ h1 {
 
 /*Fin encabezado*/
 
+
+
 #menu_registro {
     margin: 50 0 0 290;
     width: 450px;
@@ -92,45 +93,34 @@ h1 {
     z-index: 999;
 }
 
+/*Campos de introducción de texto del login*/
 #usr,
 #pwd {
     width: 200px;
     margin-left: 120px;
 }
 
-#boton1 {
-
-    margin-left: 500px;
-    width: 90px;
-    height: 30px;
-    border-radius: 50px;
-    background-color: #AA1111;
-    color: white;
-    border: none;
-}
-
-#boton1:hover {
-    transition: 1s;
-    border: 2px solid white;
-    border-bottom: 2px solid gray;
+/*Boton login*/
+#boton2:hover {
+    border: 1px solid black;
     cursor: pointer;
 }
 
-/*Opción del menu de la pagina activa*/
+
+/*Opción del menu superior y lateral que cambia el fondo del botón en base a la pagina activa*/
 #activo {
     background-color: #EBEBEB;
     border-bottom: 1px solid #AA1111;
 }
 
-/* menu izquierda  */
-
-
+/*Menu lateral*/
 ul {
     list-style: none;
     background: rgba(184, 184, 184, 1);
     padding-left: 0px;
     margin-top: -30px;
 }
+
 
 #menu {
     background: black;
@@ -146,6 +136,20 @@ ul {
     margin-right: -10px;
 
 
+}
+
+#acceso {
+    margin-top:-100px;
+    margin-left: 50px;
+    transition: left .5s ease;
+    padding:20px;
+    height:55px;
+}
+
+#acceso:hover{
+    
+    text-shadow: 1px 1px gray;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #menu_principal a,
@@ -198,7 +202,7 @@ label {
 }
 
 
-/* Ocultar  y mostrar menu horizontal y vertical*/
+/*Boton para ocultar y mostrar menu horizontal y vertical*/
 
 #menu {
 
@@ -252,6 +256,11 @@ label {
         margin: 0 0 0 390;
     }
 
+    /*pop-up de menu de inicio de sesion y registro*/
+    #menu_registro {
+        margin-left: 20%;
+    }
+
 }
 
 @media screen and (max-width:600px) {
@@ -268,6 +277,11 @@ label {
 
     #boton1 {
         margin-left: 200px;
+    }
+
+    /*pop-up de menu de inicio de sesion y registro*/
+    #menu_registro {
+        margin-left: 5%;
     }
 
 }
