@@ -12,7 +12,7 @@
 <body>
     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
 
-   
+
 
     <div id="menu">
         <nav>
@@ -60,7 +60,7 @@
             </a>
         </div>
         <div id="encabezadoPrincipal">
-            <a id="colegiacion" href="index.html">
+            <a id="colegiacion" href="formRegistro.html">
                 <div>Colegiacion</div>
             </a>
             <a id="formacion" href="formacion.html">
@@ -77,6 +77,9 @@
             </a>
             <a id="acceder" name="botonAcceso" href="javascript:cargaLogin();">
                 <div>Acceder</div>
+            </a>
+            <a id="cerrar" href="javascript:cerrarSesion();">
+                <div style="width: 150;">Cerrar sesión</div>
             </a>
         </div>
     </div>
@@ -104,9 +107,9 @@
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
- 
 
-        <h1>Bolsa de Trabajo  <a id="RSS" href="RSS2.xml"><img src="imagenes/rss.jpg" alt="Boton RSS"> </a></h1>
+
+        <h1>Bolsa de Trabajo <a id="RSS" href="RSS2.xml"><img src="imagenes/rss.jpg" alt="Boton RSS"> </a></h1>
         <hr>
         <!--Primera oferta-->
         <div class="row">
@@ -125,7 +128,7 @@
                 <p>Su principal cometido será la asistencia técnica y ayuda (de manera remota) en el uso de nuestros productos de software a nuestros clientes de diferentes países.
                 </p>
 
-                <a href="../pdf/T%C3%A9cnico%20de%20Sistemas.pdf">Abrir PDF</a>
+                <a class="pdf" href="../pdf/TecnicodeSistemas.pdf" target="_blank"> <img src="../imagenes/pdf.webp" alt=""> Abrir PDF</a>
             </div>
         </div>
 
@@ -141,7 +144,9 @@
                 <p>Con conocimientos necesarios de CCTV, Control de accesos, VMS, Integración de sistemas, Configuración de redes, Configuración de Sistemas, Asistencia técnica.
                 </p>
 
-                 <a href="../pdf/T%C3%A9cnico%20de%20Sistemas2.pdf">Abrir PDF</a>
+                
+                
+                <a class="pdf" href="../pdf/TecnicodeSistemas2.pdf" target="_blank"> <img src="../imagenes/pdf.webp" alt=""> Abrir PDF</a>
             </div>
         </div>
 
@@ -162,7 +167,7 @@
 
                 <p>Informática y telecomunicaciones - Programación</p>
 
-                 <a href="../pdf/Programador.pdf">Abrir PDF</a>
+                <a class="pdf" href="../pdf/Programador.pdf" target="_blank"> <img src="../imagenes/pdf.webp" alt=""> Abrir PDF</a>
             </div>
         </div>
     </div>

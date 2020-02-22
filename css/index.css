@@ -273,6 +273,8 @@ label {
 
 /*Para los anonimos, no muestre los siguentes*/
 #formacion,
-#colegiacion {
+#colegiacion,
+#cerrar,
+#bolsaTrabajo {
     display: none;
 }
