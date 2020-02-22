@@ -1,22 +1,61 @@
-.contactoPng{
+.contactoPng {
     width: 100px;
-    float: right;
+    margin-left: 150px;
 }
 
-p{
-    padding-top: 30px;
+.contactoPng2 {
+    width: 100px;
+    margin-left: 470px;
+    margin-top: -150px;
+
+
 }
+
+.contactoPng3 {
+    width: 100px;
+    margin-left: 790px;
+    margin-top: -150px
+}
+
+#correo {
+
+    margin-left: 100px;
+
+
+}
+
+
+#telefono {
+    margin-left: 400px;
+    margin-top: -50px;
+
+}
+
+#direccion {
+
+    margin-left: 700px;
+    margin-top: -50px;
+
+}
+
+
 
 .row {
-    margin-top: 20px;
+    margin-top: 00px;
 }
 
-#menu_registro{
-    margin-top:-100px;
-    height:550px;
+#menu_registro {
+    margin-top: -100px;
+    height: 550px;
 }
 
-#mapa{
+#mapa {
     margin-left: 220px;
+    padding-bottom: 50px;
+}
+
+#contactanos {
+
+    margin-left: 320px;
     padding-bottom: 50px;
 }

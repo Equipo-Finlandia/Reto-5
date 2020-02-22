@@ -10,9 +10,9 @@
 </head>
 
 <body>
-       <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
+    <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
 
- <div id="menu">
+    <div id="menu">
         <nav>
             <ul id="menu_principal">
                 <li>
@@ -30,7 +30,7 @@
                     </label>
                 </li>
                 <li>
-                    <label  for="submenu3">
+                    <label for="submenu3">
                         <a href="formRegistro.html"> 🎓 Colegiación</a>
                     </label>
                 </li>
@@ -63,7 +63,7 @@
             <a id="colegiacion" href="formRegistro.html">
                 <div>Colegiacion</div>
             </a>
-            <a id="formacion"href="formacion.html">
+            <a id="formacion" href="formacion.html">
                 <div>Formacion</div>
             </a>
             <a href="bolsaTrabajo.html">
@@ -98,10 +98,10 @@
                     <p>Contraseña:</p>
                 </label>
                 <input type="password" name="contrasena" id="pwd" class="form-control" placeholder="Contraseña">
-    
+
                 <br />
                 <input type="submit" value="Iniciar Sesion" id="boton2">
-    
+
                 <br />
                 <hr />
             </form>
@@ -109,59 +109,85 @@
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
-            
-        <!--Primer boton-->
+        
+        <br> <br />
+        <br> <br />
+        
+                <!--Primer boton-->
         <div class="row">
-            <div class="col-sm-5 noticias">
+            <div>
                 <img src="../imagenes/correo.png" class="contactoPng">
             </div>
-            <div class="col-sm-7 noticias">
-                <p>
+            <div>
+                <p id="correo">
                     Correo Electronico: <br> info@CTSPV.com
                 </p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-5 noticias">
-                <img src="../imagenes/telefono.png" class="contactoPng">
+            <div>
+                <img src="../imagenes/telefono.png" class="contactoPng2">
             </div>
-            <div class="col-sm-7 noticias">
-                <p>
+            <div>
+                <p id="telefono">
                     Telefono de Contacto: <br> +34 123 456 789
                 </p>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-5 noticias">
-                <img src="../imagenes/direccion.png" class="contactoPng">
+            <div>
+                <img src="../imagenes/direccion.png" class="contactoPng3">
             </div>
-            <div class="col-sm-7 noticias">
-                <p>
+            <div>
+                <p id="direccion">
                     Direccion: <br> Berio Pasealekua, 50, 20018 Donostia, Gipuzkoa
                 </p>
             </div>
         </div>
+        
+        <br> <br />
+
+
+        <div id="contactanos">
+            <form action="mailto:CTSPVfinlandia@gmail.com" method="post" enctype="text/plain">
+                <p>Introduzca su nombre:</p>
+                <input type="text" name="nombre" size="30">
+               
+               <p> Ingrese su dirección de correo electronico:</p>
+                <input type="text" name="dirección" size="30">
+              
+               <p> Informe del problema:</p>
+               
+                <textarea rows="5" cols="40" name="problema"></textarea>
+                <br> <br />
+                <input type="submit" value="Enviar correo electronico">
+            </form>
+
+        </div>
+
+
+
         <div id="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.4483832497463!2d-2.0166142!3d43.3048723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b0708baa02bb%3A0x4b55a087d653821b!2sCebanc!5e0!3m2!1ses!2ses!4v1582044741731!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.4483832497463!2d-2.0166142!3d43.3048723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b0708baa02bb%3A0x4b55a087d653821b!2sCebanc!5e0!3m2!1ses!2ses!4v1582044741731!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
     </div>
-    
-        <script>
+
+    <script>
         function responsive(x) {
 
             var menuvertical = document.getElementById("menu");
 
 
             if (x.matches) { // si coincide con la resolución de ventana
-                
-                
+
+
             } else {
-                
+
                 menuvertical.style.display = "none";
-                
-                
+
+
             }
         }
 
@@ -169,27 +195,25 @@
         responsive(x) // Llama al listener
         x.addListener(responsive); //Vincula el listener al cambiar de estado
 
-        
+
         //Funcion que "abre" el menu lateral
-        
+
         var abierto = false;
+
         function cargaMenu() {
             var menuvertical = document.getElementById("menu");
             if (abierto === true) {
                 menuvertical.style.display = "none";
                 console.log(abierto);
                 abierto = false;
-                
+
             } else {
                 menuvertical.style.display = "block";
                 console.log(abierto);
                 abierto = true;
             }
         }
-
     </script>
-    
-    
-</body>
 
-</html>
+
+</body></html>
