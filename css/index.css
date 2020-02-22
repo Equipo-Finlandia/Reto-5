@@ -197,7 +197,8 @@ label {
     box-shadow: 2px 2px gray;
 }
 
-/* Ocular  y mostrar menu horizontal y vertical*/
+
+/* Ocultar  y mostrar menu horizontal y vertical*/
 
 #menu {
 
@@ -271,7 +272,7 @@ label {
 
 }
 
-/*Para los anonimos, no muestre los siguentes*/
+/*Para los usuarios anonimos, no muestre los siguentes*/
 #formacion,
 #colegiacion,
 #cerrar,

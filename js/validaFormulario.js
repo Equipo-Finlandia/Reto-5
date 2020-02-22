@@ -445,3 +445,23 @@ function validaTelefono(){
     }
 	
 }
+
+//Funcion que comprueba que toda la información se haya introducido correctamente
+function validaTodo(){
+	
+	if ( validaNombre()==true &&
+		 validaApellido1()== true &&
+		 validaApellido2()== true &&
+		 validaContrasena() == true &&
+		 comparaContrasena()== true &&
+		 validaDNI()== true &&
+		 validaCentro()==true &&
+		 validaDireccion()==true &&
+		 validaTitulacion() == true &&
+		 validaTelefono()== true){
+			 
+			 return true;
+		 }else{
+			 return false;
+		 }
+}

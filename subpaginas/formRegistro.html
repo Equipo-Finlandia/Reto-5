@@ -2,11 +2,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Registro</title>
+    <title>Colegiación</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="..\css\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="..\css\index.css">
-    <link rel="stylesheet" type="text/css" href="..\css\formRegistro.css">
+    <link rel="stylesheet" type="text/css" href="../css/formRegistro.css">
     <script type="text/javascript" src="..\js\modoNoche.js"></script>
     <script type="text/javascript" src="..\js\index.js"></script>
     <script type="text/javascript" src="..\js\validaFormulario.js"></script>
@@ -91,7 +91,7 @@
 
         <div id="menu_registro" class="form-group">
             <h1>Acceder</h1>
-            <form id="form_login" method="" action="php/login.php">
+            <form id="form_login" method="post" action="php/login.php" onsubmit="return validaLogin()">
                 <label for="nombre" id="etiq_nombre">
                     <p>Nombre de usuario:</p>
                 </label>
@@ -111,64 +111,66 @@
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
-<h2>Razones por las que hay que colegiarse</h2>
-        <div >
+        <h2>Razones por las que hay que colegiarse</h2>
+        <div>
             <div id="razones">
-            
-            
-            <p> Los colegios profesionales son entidades corporativas de derecho público, sin ánimo de lucro cuyo OBJETIVO PRIMERO es DEFENDER LA PROFESIÓN, pero además el CTSPV:</p>
 
-            <p> Defiende las competencias que por el hecho de estar en el colegio que corresponden
-                Al colegio no puede pertenecer cualquiera, por lo que establece una MARCA DE EXCLUSIVIDAD para los colegiados.</p>
-            <p>Cada vez más las empresas del sector se dirigen al SERVICIO DE EMPLEO del CTSPV para seleccionar Licenciados, Ingenieros o Máster en Ingeniería Informática.
-                Si estás desempleado, la BOLSA DE TRABAJO puede serte útil porque al colegio llegan ofertas de empleo muy interesantes.</p>
-            <p>La BOLSA DE TRABAJO puede serte útil si lo que buscas es un cambio de empleo.
-                Tanto si estas desempleado como si buscas puedes utilizar La BOLSA DE TRABAJO del CTSPV.</p>
+                <p> Los colegios profesionales son entidades corporativas de derecho público, sin ánimo de lucro cuyo OBJETIVO PRIMERO es DEFENDER LA PROFESIÓN, pero además el CTSPV:</p>
+
+                <p> Defiende las competencias que por el hecho de estar en el colegio que corresponden
+                    Al colegio no puede pertenecer cualquiera, por lo que establece una MARCA DE EXCLUSIVIDAD para los colegiados.</p>
+                <p>Cada vez más las empresas del sector se dirigen al SERVICIO DE EMPLEO del CTSPV para seleccionar Licenciados, Ingenieros o Máster en Ingeniería Informática.
+                    Si estás desempleado, la BOLSA DE TRABAJO puede serte útil porque al colegio nos llegan ofertas de empleo muy interesantes.</p>
+                <p>La BOLSA DE TRABAJO puede serte útil si lo que buscas es un cambio de empleo.
+                    Tanto si estas desempleado como si buscas trabajo, puedes utilizar La BOLSA DE TRABAJO del CTSPV.</p>
+            </div>
+
+            <h2>Formulario de Registro</h2>
+
+            <div id="formulario">
+                <!--Formulario carga el php de registro. Solo si validaTodo devuelve true-->
+                <form method="post" action="..\php\registro.php" onsubmit="return validaTodo()">
+                     <!--Columna izquierda del formulario de registro-->
+                    <div id="form1">
+                        <br />
+                        <legend>Formulario de Registro</legend>
+                        <label for="nombre" id="etiq_reg_nombre">Nombre: </label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" onfocusout="validaNombre()"><br />
+
+                        <label for="apell1" id="etiq_apellido1">Apellido 1: </label>
+                        <input type="text" id="apell1" name="apell1" placeholder="Apellido 1" onfocusout="validaApellido1()"><br />
+
+                        <label for="apell2" id="etiq_apellido2">Apellido 2: </label>
+                        <input type="text" id="apell2" name="apell2" placeholder="Apellido 2" onfocusout="validaApellido2()"><br />
+
+                        <label for="pass" id="etiq_reg_contrasena">Contraseña: </label>
+                        <input type="password" id="pass" name="pass" placeholder="Contraseña" onfocusout="validaContrasena()"><br />
+
+                        <label for="pass2" id="etiq_contrasena2">Repetir contraseña: </label>
+                        <input type="password" id="pass2" name="pass2" placeholder="Repetir Contraseña" onfocusout="comparaContrasena()"><br />
+                    </div>
+                    <!--Columna derecha del formulario de registro-->
+                    <div id="form2">
+                        <br /><br /><br /><br />
+                        <label for="dni" id="etiq_dni">DNI: </label>
+                        <input type="text" id="dni" name="dni" placeholder="DNI" onfocusout="validaDNI()"><br />
+                        <label for="centroacadem" id="etiq_centro">Centro Academico: </label>
+                        <input type="text" id="centroacadem" name="centro" placeholder="Centro Academico" onfocusout="validaCentro()"><br />
+                        <label for="direccion" id="etiq_direccion">Direccion: </label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Dirección" onfocusout="validaDireccion()"><br />
+                        <label for="titulacion" id="etiq_titulacion">Titulacion: </label>
+                        <input type="text" id="titulacion" name="titulacion" placeholder="Titulación" onfocusout="validaTitulacion()"><br />
+                        <label for="telefono" id="etiq_telefono">Telefono: </label>
+                        <input type="text" id="telefono" name="telefono" placeholder="Teléfono" onfocusout="validaTelefono()"><br />
+                    </div>
+                    <br /><br />
+                    <input type="submit" value="Enviar" id="botonEnviar" >
+                </form>
+            </div>
+
+            <p id="mensaje">*Una vez verifiquemos sus datos, le llaremos al teléfono facilitado en un plazo de 14 dias para ser dado de alta</p>
+
         </div>
-
-        <h2>Formulario de Registro</h2>
-
-        <div id="formulario">
-            <form method="post" action="../php/registro.php">
-                <div id="form1">
-                    <br />
-                    <legend>Formulario de Registro</legend>
-                    <label for="nombre" id="etiq_reg_nombre">Nombre: </label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" onfocusout="validaNombre()"><br />
-
-                    <label for="apell1" id="etiq_apellido1">Apellido 1: </label>
-                    <input type="text" id="apell1" name="apell1" placeholder="Apellido 1" onfocusout="validaApellido1()"><br />
-
-                    <label for="apell2" id="etiq_apellido2">Apellido 2: </label>
-                    <input type="text" id="apell2" name="apell2" placeholder="Apellido 2" onfocusout="validaApellido2()"><br />
-
-                    <label for="pass" id="etiq_reg_contrasena">Contraseña: </label>
-                    <input type="password" id="pass" name="pass" placeholder="Contraseña" onfocusout="validaContrasena()"><br />
-
-                    <label for="pass2" id="etiq_contrasena2">Repetir contraseña: </label>
-                    <input type="password" id="pass2" name="pass2" placeholder="Repetir Contraseña" onfocusout="comparaContrasena()"><br />
-                </div>
-
-                <div id="form2">
-                    <br /><br /><br /><br />
-                    <label for="dni" id="etiq_dni">DNI: </label>
-                    <input type="text" id="dni" name="dni" placeholder="DNI" onfocusout="validaDNI()"><br />
-                    <label for="centroacadem" id="etiq_centro">Centro Academico: </label>
-                    <input type="text" id="centroacadem" name="centro" placeholder="Centro Academico" onfocusout="validaCentro()"><br />
-                    <label for="direccion" id="etiq_direccion">Direccion: </label>
-                    <input type="text" id="direccion" name="direccion" placeholder="Dirección" onfocusout="validaDireccion()"><br />
-                    <label for="titulacion" id="etiq_titulacion">Titulacion: </label>
-                    <input type="text" id="titulacion" name="titulacion" placeholder="Titulación" onfocusout="validaTitulacion()"><br />
-                    <label for="telefono" id="etiq_telefono">Telefono: </label>
-                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono" onfocusout="validaTelefono()"><br />
-                </div>
-                <br /><br />
-                <input type="submit" value="Enviar" id="botonEnviar">
-            </form>
-        </div>
-            
-          <p id="mensaje">*Despues de enviar el formulario le llaramos a el telefono facilitado en un plazo de 14 dias</p>  
-                
     </div>
 
     <script>
@@ -220,6 +222,9 @@
             menuvert.style.display = "none";
             abierto = false;
         }
+
     </script>
 
-</body></html>
+</body>
+
+</html>
