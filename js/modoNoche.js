@@ -18,19 +18,25 @@ window.onload=function(){
 	var formacion = document.getElementById("formacion");
 	var acceder = document.getElementById("acceder");
 	var colegiacion = document.getElementById("colegiacion");
+	var cerrar = document.getElementById("cerrar");
+	var bolsaTrabajo = document.getElementById("bolsaTrabajo");
 	
     console.log(this.sesion);
     if (this.sesion==null || this.sesion=='0'){
         console.log("no hay sesion");
         formacion.style.display= 'none';
         colegiacion.style.display= 'block';
-    	acceder.style.display= 'block';
+		acceder.style.display= 'block';
+		cerrar.style.display= 'none';
+		bolsaTrabajo.style.display= 'none';
     }
 	if(this.sesion=='1'){
     	console.log("sesion correcto");
         formacion.style.display= 'block';
-        colegiacion.style.display= 'block';
-    	acceder.style.display= 'none';
+        colegiacion.style.display= 'none';
+		acceder.style.display= 'none';
+		cerrar.style.display= 'block';
+		bolsaTrabajo.style.display= 'block';
     }
 	modoNoche(this.modo);//mandar @modo a function()
 }
@@ -80,4 +86,15 @@ function sesionCorrecto(){
 	this.sesion='1';
     localStorage.setItem('sesion','1');
     console.log(this.sesion);
+}
+
+function cerrarSesion(){
+	this.sesion='0';
+	localStorage.setItem('sesion','0');
+	console.log(this.sesion);
+	formacion.style.display= 'none';
+    colegiacion.style.display= 'block';
+	acceder.style.display= 'block';
+	cerrar.style.display= 'none';
+	bolsaTrabajo.style.display= 'none';
 }
