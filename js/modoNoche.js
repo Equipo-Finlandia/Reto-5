@@ -21,13 +21,13 @@ window.onload=function(){
 	
     console.log(this.sesion);
     if (this.sesion==null || this.sesion=='0'){
-        console.log("no hay sesion");
+        console.log("sesion no iniciada");
         formacion.style.display= 'none';
         colegiacion.style.display= 'block';
     	acceder.style.display= 'block';
     }
 	if(this.sesion=='1'){
-    	console.log("sesion correcto");
+    	console.log("sesion iniciada");
         formacion.style.display= 'block';
         colegiacion.style.display= 'block';
     	acceder.style.display= 'none';
@@ -73,7 +73,7 @@ function modoNoche(modoNull) { //recibir llamada, llamarlo como @modoNull
 		}else{//else @modo='blanco', significa que usuario ahora tiene página en negro (vea linea 29)
 			localStorage.setItem('modo','negro');//guardar @modo='blanco' en local
 		}
-	}//Hasí hace que cuando cambia de página, se mantiene el modo que tenía.
+	}//así hace que cuando cambia de página, se mantiene el modo que tenía.
 }
 
 function sesionCorrecto(){
