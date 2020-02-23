@@ -1,18 +1,21 @@
+/*Texto convenios*/
 #definicionConvenio{
     margin-left: 20px;
     margin-right: 20px;
     text-align: justify;
 }
 
+/*Parrafos Texto convenios*/
 #definicionConvenio p{
     margin-bottom: 70px;
 }
 
-
+/*Menu acceder*/
 #menu_registro {
     margin-top:-550px;
 }
 
+/*Tamaño imgagen PDF*/
 .pdf img{
     width: 20px;
 }
