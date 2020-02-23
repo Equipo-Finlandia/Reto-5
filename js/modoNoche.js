@@ -16,27 +16,36 @@ window.onload=function(){
 	}
 	// Comprobar sesion
 	var formacion = document.getElementById("formacion");
+	var formacion2 = document.getElementById("formacion2");
 	var acceder = document.getElementById("acceder");
 	var colegiacion = document.getElementById("colegiacion");
+	var colegiacion2 = document.getElementById("colegiacion2");
 	var cerrar = document.getElementById("cerrar");
 	var bolsaTrabajo = document.getElementById("bolsaTrabajo");
+	var bolsaTrabajo2 = document.getElementById("bolsaTrabajo2");
 	
     console.log(this.sesion);
     if (this.sesion==null || this.sesion=='0'){
         console.log("sesion no iniciada");
-        formacion.style.display= 'none';
-        colegiacion.style.display= 'block';
+		formacion.style.display= 'none';
+		formacion2.style.display= 'none';
+		colegiacion.style.display= 'block';
+		colegiacion2.style.display= 'block';
 		acceder.style.display= 'block';
 		cerrar.style.display= 'none';
 		bolsaTrabajo.style.display= 'none';
+		bolsaTrabajo2.style.display= 'none';
     }
 	if(this.sesion=='1'){
     	console.log("sesion iniciada");
-        formacion.style.display= 'block';
-        colegiacion.style.display= 'none';
+		formacion.style.display= 'block';
+		formacion2.style.display= 'block';
+		colegiacion.style.display= 'none';
+		colegiacion2.style.display= 'none';
 		acceder.style.display= 'none';
 		cerrar.style.display= 'block';
 		bolsaTrabajo.style.display= 'block';
+		bolsaTrabajo2.style.display= 'block';
     }
 	modoNoche(this.modo);//mandar @modo a function()
 }
