@@ -117,7 +117,7 @@ function validaContrasenaInicio() {
 
 	//Listener y función que recoge las distintas opciones de accesibilidad
 	//para favorecer la legibilidad.
-	window.addEventListener("keydown", aumentaLetra)
+	window.addEventListener("keydown", aumentaLetra);
 	var tam = 14;
 	var grosor = 500;
 	function aumentaLetra(event){
