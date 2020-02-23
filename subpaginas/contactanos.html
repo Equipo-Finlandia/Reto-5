@@ -12,16 +12,19 @@
 <body>
     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
 
-     <div id="menu">
+    <div id="menu">
         <nav>
             <ul id="menu_principal">
+                <label id="acceso" for="submenu0">
+                    <a name="botonAcceso" href="javascript:cargaLogin();">Acceder</a>
+                </label>
                 <li>
                     <a href="..\index.html">🏠 Inicio</a>
                 </li>
 
                 <li>
                     <label for="submenu1">
-                        <a href="contactanos.html"> 🏫 Contáctanos</a>
+                        <a href="contactanos.html"> ➥🏫 Contáctanos</a>
                     </label>
                 </li>
                 <li>
@@ -41,7 +44,7 @@
                 </li>
                 <li>
                     <label for="submenu6">
-                        <a href="bolsaTrabajo.html">➥💰 Bolsa de empleo</a>
+                        <a href="bolsaTrabajo.html">💰 Bolsa de empleo</a>
                     </label>
                 </li>
                 <li>
@@ -101,7 +104,7 @@
                     <p>Nombre de usuario:</p>
                 </label>
                 <input type="text" name="nombre" id="usr" class="form-control" placeholder="Usuario" onfocusout="validaNombreInicio()">
-                <label for="contraseña"  id="etiq_contrasena">
+                <label for="contraseña" id="etiq_contrasena">
                     <p>Contraseña:</p>
                 </label>
                 <input type="password" name="contrasena" id="pwd" class="form-control" placeholder="Contraseña" onfocusout="validaContrasenaInicio()">
@@ -116,11 +119,11 @@
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
-        
+
         <br> <br />
         <br> <br />
-        
-                <!--Primer boton-->
+
+        <!--Primer boton-->
         <div class="row">
             <div>
                 <img src="../imagenes/correo.png" class="contactoPng" alt="icono correo electronico">
@@ -153,7 +156,7 @@
                 </p>
             </div>
         </div>
-        
+
         <br> <br />
 
 
@@ -161,12 +164,12 @@
             <form action="mailto:CTSPVfinlandia@gmail.com" method="post" enctype="text/plain">
                 <p>Introduzca su nombre:</p>
                 <input type="text" name="nombre" size="30">
-               
-               <p> Ingrese su dirección de correo electronico:</p>
+
+                <p> Ingrese su dirección de correo electronico:</p>
                 <input type="text" name="dirección" size="30">
-              
-               <p> Informe del problema:</p>
-               
+
+                <p> Informe del problema:</p>
+
                 <textarea rows="5" cols="40" name="problema"></textarea>
                 <br> <br />
                 <input type="submit" value="Enviar correo" id="boton2">
@@ -220,7 +223,10 @@
                 abierto = true;
             }
         }
+
     </script>
 
 
-</body></html>
+</body>
+
+</html>
