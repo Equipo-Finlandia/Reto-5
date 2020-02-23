@@ -16,35 +16,39 @@
 
     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
 
-    <div id="menu">
+      <div id="menu">
         <nav>
             <ul id="menu_principal">
+                <label id="acceso" for="Acceder">
+                    <a name="botonAcceso" href="javascript:cargaLogin();">Acceder</a>
+                </label>
                 <li>
                     <a href="../index.html">🏠 Inicio</a>
                 </li>
                 <li>
-                    <label for="submenu1">
+                    <label for="Contactanos">
                         <a href="contactanos.html"> 🏫 Contáctanos</a>
                     </label>
                 </li>
                 <li>
-                    <label for="submenu2">
+                    <label for="Convenio">
                         <a href="convenio.html"> 🤝 Convenios</a>
                     </label>
                 </li>
                 <li>
-                    <label for="submenu3">
-                        <a href="formRegistro.html"> 🎓 Colegiación</a>
+                    <label for="Colegiacion" id="activo">
+                        <a href="formRegistro.html">➥🎓 Colegiación</a>
                     </label>
                 </li>
-                <li>
-                    <label for="submenu5">
-                        <a href="formacion.html"> 🖥️ Formación</a>
+
+                <li id="formacion">
+                    <label for="Formacion">
+                        <a href="formacion.html">🖥️ Formación</a>
                     </label>
                 </li>
-                <li>
-                    <label for="submenu6">
-                        <a href="bolsaTrabajo.html">➥💰 Bolsa de empleo</a>
+                <li id="bolsaTrabajo">
+                    <label for="bolsaTrabajo">
+                        <a href="bolsaTrabajo.html">💰 Bolsa de empleo</a>
                     </label>
                 </li>
                 <li>
