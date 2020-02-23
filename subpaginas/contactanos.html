@@ -38,7 +38,7 @@
                     </label>
                 </li>
                 <li id="formacion">
-                    <label for="Formacion" >
+                    <label for="Formacion">
                         <a href="formacion.html"> 🖥️ Formación</a>
                     </label>
                 </li>
@@ -95,8 +95,6 @@
     </div>
     <div id="contenedor">
         <a href="../index.html"><img id="CTSPV" src="../imagenes/cebanc.jpg"></a>
-        <h1>Contacto</h1>
-        <hr>
         <div id="menu_registro" class="form-group">
             <h1>Acceder</h1>
             <form id="form_login" method="" action="../php/login.php">
@@ -119,18 +117,31 @@
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
-        
-        <br> <br />
-        <br> <br />
-        
-                <!--Primer boton-->
+
+
+        <h2>¿Que es el colegio?</h2>
+
+        <p id="colegio">Es una entidad sin ánimo de lucro que acoge a todos los LICENCIADOS EN INFORMÁTICA, INGENIEROS EN INFORMÁTICA y MASTER EN INGENIERÍA INFORMÁTICA.
+            <br><br />
+            Pertenecer al colectivo de profesionales de Ingeniería Informática te permite colaborar activamente en el desarrollo de la profesión permitiendo que la Ingeniería Informática sea reconocida profesionalmente por la sociedad y por las instituciones tanto públicas como privadas.
+            <br><br />
+            Identificando de esta manera los beneficios de contar con un profesional capacitado y asegurando la calidad y el buen hacer de los profesionales de la Ingeniería Informática.
+            <br><br />
+
+            Los Colegios profesionales ofrecen gran cantidad de servicios a los colegiados entre los que destaca la formación, el empleo y la participación en grupos de trabajo especializados. Puedes consultar la gran variedad de servicios que se ofrecen aquí.
+            <br><br />
+            Si eres estudiante de un Master Universitario de Ingeniería Informática puedes participar activamente, conociendo las salidas profesionales que más te pueden interesar y adquiriendo complementos de formación que te permitan asegurar tu salida al mercado laboral.<br /></p>
+
+        <h2>Contactanos</h2>
+
+        <!--Primer boton-->
         <div class="row">
             <div>
                 <img src="../imagenes/correo.png" class="contactoPng">
             </div>
             <div>
                 <p id="correo">
-                    Correo Electronico: <br> info@CTSPV.com
+                    Correo Electronico:  info@CTSPV.com
                 </p>
             </div>
         </div>
@@ -141,7 +152,7 @@
             </div>
             <div>
                 <p id="telefono">
-                    Telefono de Contacto: <br> +34 123 456 789
+                    Telefono de Contacto:  +34 123 456 789
                 </p>
             </div>
         </div>
@@ -152,25 +163,25 @@
             </div>
             <div>
                 <p id="direccion">
-                    Direccion: <br> Berio Pasealekua, 50, 20018 Donostia, Gipuzkoa
+                    Direccion:  Berio Pasealekua, 50, 20018 Donostia, Gipuzkoa
                 </p>
             </div>
         </div>
-        
+
         <br> <br />
 
 
         <div id="contactanos">
             <form action="mailto:CTSPVfinlandia@gmail.com" method="post" enctype="text/plain">
                 <p>Introduzca su nombre:</p>
-                <input type="text" name="nombre" size="30">
-               
-               <p> Ingrese su dirección de correo electronico:</p>
-                <input type="text" name="dirección" size="30">
-              
-               <p> Informe del problema:</p>
-               
-                <textarea rows="5" cols="40" name="problema"></textarea>
+                <input type="text" name="Nombre" size="30">
+
+                <p> Ingrese su dirección de correo electronico:</p>
+                <input type="text" name="Direccion de correo electronico" size="30">
+
+                <p> Indiquenos brevemente el motivo por el que quiere contactar con el CTSPV:</p>
+
+                <textarea rows="5" cols="40" name="Motivo"></textarea>
                 <br> <br />
                 <input type="submit" value="Enviar correo" id="boton2">
             </form>
