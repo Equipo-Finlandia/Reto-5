@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <title>Colegiación</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="..\css\bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="..\css\index.css">
-    <link rel="stylesheet" type="text/css" href="..\css\formRegistro.css">
-    <script type="text/javascript" src="..\js\modoNoche.js"></script>
-    <script type="text/javascript" src="..\js\index.js"></script>
-    <script type="text/javascript" src="..\js\validaFormulario.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/formRegistro.css">
+    <script type="text/javascript" src="../js/modoNoche.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/validaFormulario.js"></script>
 </head>
 
 <body>
 
     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
 
-     <div id="menu">
+    <div id="menu">
         <nav>
             <ul id="menu_principal">
                 <li>
-                    <a href="..\index.html">🏠 Inicio</a>
+                    <a href="../index.html">🏠 Inicio</a>
                 </li>
-
                 <li>
                     <label for="submenu1">
                         <a href="contactanos.html"> 🏫 Contáctanos</a>
@@ -30,7 +29,7 @@
                 </li>
                 <li>
                     <label for="submenu2">
-                        <a href="Convenio.html"> 🤝 Convenios</a>
+                        <a href="convenio.html"> 🤝 Convenios</a>
                     </label>
                 </li>
                 <li>
@@ -49,11 +48,9 @@
                     </label>
                 </li>
                 <li>
-                    <label for="submenu7">
-                        <a id="activarNoche" href="javascript:modoNoche();">
-                            <div>🌙 Modo Noche</div>
-                        </a>
-                    </label>
+                    <a id="activarNoche" href="javascript:modoNoche();">
+                        <div>🌙 Modo Noche</div>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -142,7 +139,7 @@
 
             <div id="formulario">
                 <!--Formulario carga el php de registro. Solo si validaTodo devuelve true-->
-                <form method="post" action="..\php\registro.php" onsubmit="return validaTodo()">
+                <form method="post" action="../php/registro.php" onsubmit="return validaTodo()">
                     <!--Columna izquierda del formulario de registro-->
 
                     <div id="form1">
@@ -187,6 +184,7 @@
             </div>
             <p id="mensaje">*Una vez verifiquemos sus datos, le llaremos al teléfono facilitado en un plazo de 14 dias para ser dado de alta</p>
         </div>
+    </div>
 
         <script>
             function responsive(x) {
