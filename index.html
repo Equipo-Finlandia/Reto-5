@@ -10,43 +10,63 @@
 </head>
 
 <body>
+    
+        <!--Menu vertical -->
+    
     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
 
-    <div id="menu">
+        <div id="menu">
         <nav>
             <ul id="menu_principal">
-                <li id="activo">
-                    <a href="index.html">➥🏠 Inicio</a>
+                <li>
+                    <a href="..\index.html">🏠 Inicio</a>
                 </li>
 
                 <li>
                     <label for="submenu1">
-                        <a href="subpaginas/contactanos.html">🏫 Contáctanos</a>
+                        <a href="contactanos.html"> 🏫 Contáctanos</a>
                     </label>
                 </li>
                 <li>
                     <label for="submenu2">
-                        <a href="subpaginas/Convenio.html">🤝 Convenios</a>
+                        <a href="Convenio.html"> 🤝 Convenios</a>
                     </label>
                 </li>
                 <li>
                     <label for="submenu3">
-                        <a href="subpaginas/formRegistro.html">🎓 Colegiación</a>
+                        <a href="formRegistro.html"> 🎓 Colegiación</a>
                     </label>
                 </li>
                 <li>
                     <label for="submenu5">
-                        <a href="subpaginas/formacion.html">🖥️ Formación</a>
+                        <a href="formacion.html"> 🖥️ Formación</a>
                     </label>
                 </li>
                 <li>
                     <label for="submenu6">
-                        <a href="subpaginas/bolsaTrabajo.html">💰 Bolsa de empleo</a>
+                        <a href="bolsaTrabajo.html">➥💰 Bolsa de empleo</a>
+                    </label>
+                </li>
+                <li>
+                    <label for="submenu7">
+                        <a href="../index.html">
+                            <div>🌍 Index</div>
+                        </a>
+                    </label>
+                </li>
+                <li>
+                    <label for="submenu8">
+                        <a id="activarNoche" href="javascript:modoNoche();">
+                            <div>🌙 Modo Noche</div>
+                        </a>
                     </label>
                 </li>
             </ul>
         </nav>
     </div>
+    
+    <!--Fin Menu vertical -->
+    
     <!--Menu horizontal superior-->
     <div id="encabezado">
         <div id="EncabezadoSegundaria">
@@ -82,6 +102,9 @@
             </a>
         </div>
     </div>
+    
+    <!--Fin Menu horizontal superior-->
+    
     <div id="contenedor">
         <!--Contenedor que recoge el contenido y el menu de inicio de sesion-->
         <a href="index.html"><img id="CTSPV" src="imagenes/cebanc.jpg" alt="logo del colegio"></a>
@@ -134,6 +157,9 @@
             </div>
         </div>
     </div>
+    
+    <!--Funcion Responsive con ocultar mostrar menu vertical-->
+    
     <script>
         function responsive(resolucion) {
 
