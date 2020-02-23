@@ -86,16 +86,18 @@
             <a id="acceder" name="botonAcceso" href="javascript:cargaLogin();">
                 <div>Acceder</div>
             </a>
-            <a id="cerrar" href="javascript:cerrarSesion();">
+          <a id="cerrar" href="../index.html" onclick="cerrarSesion();">
                 <div style="width: 150;">Cerrar sesión</div>
             </a>
         </div>
     </div>
     <div id="contenedor">
         <a href="../index.html"><img id="CTSPV" src="../imagenes/cebanc.jpg" alt="logotipo del colegio"></a>
+        
+        <!--Menu de inicio de sesion-->
         <div id="menu_registro" class="form-group">
             <h1>Acceder</h1>
-            <form id="form_login" method="" action="../php/login.php">
+            <form id="form_login" method="post" action="../php/login.php">
                 <label for="nombre">
                     <p>Nombre de usuario:</p>
                 </label>

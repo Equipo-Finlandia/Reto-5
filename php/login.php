@@ -67,16 +67,18 @@ margin-left:30%;
  $row= mysqli_fetch_array($result);
 
 
- if($row['Nombre']==$nombre && $row['Contraseña']==$contrase){
+ if($row['Nombre']==$nombre && $row['Contraseña']==$contrase && ['Activado']==1){
 	 echo "<h2><br> Has iniciado sesión correctamente!</h2>"; 
      echo "<br> Volviendo a inicio";
 	 echo "<script>sesionCorrecto()</script>";
-      header("Refresh:5; URL=https://192.168.0.104/");
+      //header("Refresh:5; URL=https://192.168.0.104/");
+	  header("Refresh:5; URL=http://212.142.193.210:10104/index.html");
     
  }else{
      echo "<h2>Contraseña o usuario incorrectos</h2>";
  echo "<br> Volviendo a inicio";
-  header("Refresh:5; URL=https://192.168.0.104/");
+  //header("Refresh:5; URL=https://192.168.0.104/");
+  header("Refresh:5; URL=http://212.142.193.210:10104/index.html");
  }
  mysqli_close($link);
 ?>

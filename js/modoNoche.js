@@ -97,4 +97,5 @@ function cerrarSesion(){
 	acceder.style.display= 'block';
 	cerrar.style.display= 'none';
 	bolsaTrabajo.style.display= 'none';
+	
 }

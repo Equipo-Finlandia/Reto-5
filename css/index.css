@@ -214,7 +214,8 @@ label {
 
 /*Contenedor noticas*/
 .noticias {
-    padding: 20px;
+    padding: 25px;
+    text-align: justify;
 }
 
 /*imagenes de noticias*/
