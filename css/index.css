@@ -38,9 +38,9 @@ h1 {
 
 /*principal: Botones con texto || secundario: Botones con icono*/
 #encabezadoPrincipal div,
-#encabezadoSegundaria div {
+#EncabezadoSegundaria div {
     text-align: center;
-    padding-top: 10px;
+    padding: 10px;
     font-size: 14px;
     color: #AA1111;
     font-weight: 700;
@@ -52,6 +52,8 @@ h1 {
     height: 40px;
     width: 100px;
 }
+
+
 
 /*Boton login*/
 #boton2 {
