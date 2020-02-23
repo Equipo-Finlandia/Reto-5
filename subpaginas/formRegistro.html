@@ -19,32 +19,35 @@
     <div id="menu">
         <nav>
             <ul id="menu_principal">
+                <label id="acceso" for="Acceder">
+                    <a name="botonAcceso" href="javascript:cargaLogin();">Acceder</a>
+                </label>
                 <li>
                     <a href="../index.html">🏠 Inicio</a>
                 </li>
                 <li>
-                    <label for="submenu1">
+                    <label for="Contacto">
                         <a href="contactanos.html"> 🏫 Contáctanos</a>
                     </label>
                 </li>
                 <li>
-                    <label for="submenu2">
+                    <label for="Convenios">
                         <a href="convenio.html"> 🤝 Convenios</a>
                     </label>
                 </li>
                 <li>
-                    <label for="submenu3">
+                    <label for="Colegiacion" id="activo">
                         <a href="formRegistro.html"> 🎓 Colegiación</a>
                     </label>
                 </li>
-                <li>
-                    <label for="submenu5">
+                <li id="formacion">
+                    <label for="Formacion">
                         <a href="formacion.html"> 🖥️ Formación</a>
                     </label>
                 </li>
-                <li>
-                    <label for="submenu6">
-                        <a href="bolsaTrabajo.html">➥💰 Bolsa de empleo</a>
+                <li id="bolsaTrabajo">
+                    <label for="bolsaTrabajo">
+                        <a href="bolsaTrabajo.html">💰 Bolsa de empleo</a>
                     </label>
                 </li>
                 <li>
@@ -95,7 +98,7 @@
 
         <div id="menu_registro" class="form-group">
             <h1>Acceder</h1>
-            
+
             <form id="form_login" method="post" action="../php/login.php" onsubmit="return validaLogin()">
                 <label for="nombre" id="etiq_nombre">
                     <p>Nombre de usuario:</p>
@@ -112,13 +115,13 @@
                 <br />
                 <hr />
             </form>
-            
+
             <h3>¿Aún no estás colegiado?</h3>
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
-        
-        
+
+
         <h2>Razones por las que colegiarse</h2>
         <div>
             <div id="razones">
@@ -186,57 +189,57 @@
         </div>
     </div>
 
-        <script>
-            function responsive(x) {
+    <script>
+        function responsive(x) {
 
-                var menuvertical = document.getElementById("menu");
-
-
-                if (x.matches) { // si coincide con la resolución de ventana
+            var menuvertical = document.getElementById("menu");
 
 
-                } else {
-
-                    menuvertical.style.display = "none";
+            if (x.matches) { // si coincide con la resolución de ventana
 
 
-                }
+            } else {
+
+                menuvertical.style.display = "none";
+
+
             }
+        }
 
-            var x = window.matchMedia("(max-width: 900px)")
-            responsive(x) // Llama al listener
-            x.addListener(responsive); //Vincula el listener al cambiar de estado
+        var x = window.matchMedia("(max-width: 900px)")
+        responsive(x) // Llama al listener
+        x.addListener(responsive); //Vincula el listener al cambiar de estado
 
 
-            //Funcion que "abre" el menu lateral
+        //Funcion que "abre" el menu lateral
 
-            var abierto = false;
+        var abierto = false;
 
-            function cargaMenu() {
-                var menuvertical = document.getElementById("menu");
-                if (abierto === true) {
-                    menuvertical.style.display = "none";
-                    console.log(abierto);
-                    abierto = false;
-
-                } else {
-                    menuvertical.style.display = "block";
-                    console.log(abierto);
-                    abierto = true;
-                }
-            }
-            var contenedor = document.getElementById("contenedor");
-            //Listener que queda a la escucha de si se hace click en el body, al tener el menu lateral abierto y lo oculta
-            contenedor.addEventListener("click", cierraMenu, true);
-
-            function cierraMenu() {
-                var menuvert = document.getElementById("menu");
-
-                menuvert.style.display = "none";
+        function cargaMenu() {
+            var menuvertical = document.getElementById("menu");
+            if (abierto === true) {
+                menuvertical.style.display = "none";
+                console.log(abierto);
                 abierto = false;
-            }
 
-        </script>
+            } else {
+                menuvertical.style.display = "block";
+                console.log(abierto);
+                abierto = true;
+            }
+        }
+        var contenedor = document.getElementById("contenedor");
+        //Listener que queda a la escucha de si se hace click en el body, al tener el menu lateral abierto y lo oculta
+        contenedor.addEventListener("click", cierraMenu, true);
+
+        function cierraMenu() {
+            var menuvert = document.getElementById("menu");
+
+            menuvert.style.display = "none";
+            abierto = false;
+        }
+
+    </script>
 
 </body>
 
