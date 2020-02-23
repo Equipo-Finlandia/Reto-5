@@ -1,11 +1,15 @@
 <html lang="es">
 
+
+
  <head>
  <meta charset="UTF-8"> 
  <title>Registro</title>
      <style>
          body{
              background-color: rgb(247,247,247);
+			 text-align:center;
+			 margin: 0 auto;
          }
      </style>
  </head>
@@ -97,7 +101,7 @@ if ($link->query($insertar) === TRUE) {
 echo "<h2>Se ha creado su cuenta correctamente</h2>";
 echo "<h3>Nos pondremos en contacto con usted en un plazo inferior a 14 días</h3>";
 echo "<h3>para darle de alta.</h3>";
-echo"<img src='..\imagenes\registroOK.gif' alt=imagen registrado con exito'>";
+echo"<img src='../imagenes/registro.gif' alt=imagen registrado con exito'>";
 header("Refresh:5; URL=http://212.142.193.210:10104/index.html");
 } else {
     echo "Error: " . $insertar . "<br>" . $link->error;

@@ -10,11 +10,20 @@
         background-color:rgb(0,11,28);
         color:white;
     }
+	
+	*{
+		text-align:center;
+	}
 
-#cargando img{
-margin-left:30%;
+    #cargando img{
+        margin:0 auto;
 
-}
+    }
+	
+	h2 {
+		background-color:orange;
+		color:rgb(0,11,28);
+	}
     
 </style>
 <?php
@@ -42,7 +51,7 @@ margin-left:30%;
         } 
     else
     {
-        echo "Conexión establecida correctamente con la base de datos.<br>";
+       // echo "Conexión establecida correctamente con la base de datos.<br>";
     }
     if(!mysqli_select_db($link, $baseDatos))
     {
@@ -51,7 +60,7 @@ margin-left:30%;
     }
     else
     {
-        echo "Se ha podido acceder a la base de datos $baseDatos <br>en la direccion: $host : $puerto  sin problema.<br>";
+     //   echo "Se ha podido acceder a la base de datos $baseDatos <br>en la direccion: $host : $puerto  sin problema.<br>";
     }
     return $link;
     }
@@ -67,17 +76,19 @@ margin-left:30%;
  $row= mysqli_fetch_array($result);
 
 
- if($row['Nombre']==$nombre && $row['Contraseña']==$contrase && ['Activado']==1){
+ if($row['Nombre']==$nombre && $row['Contraseña']==$contrase && $row['Activado']==1){
 	 echo "<h2><br> Has iniciado sesión correctamente!</h2>"; 
-     echo "<br> Volviendo a inicio";
+     echo "<p>Volviendo a inicio</p>";
 	 echo "<script>sesionCorrecto()</script>";
       //header("Refresh:5; URL=https://192.168.0.104/");
 	  header("Refresh:5; URL=http://212.142.193.210:10104/index.html");
     
  }else{
      echo "<h2>Contraseña o usuario incorrectos</h2>";
- echo "<br> Volviendo a inicio";
-  //header("Refresh:5; URL=https://192.168.0.104/");
+	 echo "<h2>Si ya se ha registrado con este usuario, es posible que su cuenta esté en proceso <br>
+	 de ser dada de alta.</h2>";
+ echo "<br> <h3>Volviendo a inicio...</h3>";
+  //header("Refresh:7; URL=https://192.168.0.104/");
   header("Refresh:5; URL=http://212.142.193.210:10104/index.html");
  }
  mysqli_close($link);
