@@ -143,44 +143,43 @@
     </div>
 
     <script>
-        function responsive(x) {
+        function responsive(resolucion) {
 
             var menuvertical = document.getElementById("menu");
 
 
-            if (x.matches) { // si coincide con la resolución de ventana
-
+            if (resolucion.matches) { // si coincide con la resolución de ventana
 
             } else {
-
                 menuvertical.style.display = "none";
-
-
+                abierto = false;
+                console.log(abierto);
             }
         }
 
-        var x = window.matchMedia("(max-width: 900px)")
-        responsive(x) // Llama al listener
-        x.addListener(responsive); //Vincula el listener al cambiar de estado
+        var resolucion = window.matchMedia("(max-width: 900px)");
+        responsive(resolucion); // Llamada al listener y le pasa como parametro la variable resolucion
+        resolucion.addListener(responsive); //Vincula el listener al cambiar de resolución la ventana
 
 
-        //Funcion que "abre" el menu lateral
 
+        //Variable booleana que se encarga de almacenar el estado del menu lateral, si está abierto o no.
         var abierto = false;
-
+        //Funcion que se encarga de mostrar el menu lateral
         function cargaMenu() {
             var menuvertical = document.getElementById("menu");
-            if (abierto === true) {
+
+            if (abierto == true) {
                 menuvertical.style.display = "none";
                 console.log(abierto);
                 abierto = false;
-
             } else {
                 menuvertical.style.display = "block";
-                console.log(abierto);
+                console.log("abierto = " + abierto);
                 abierto = true;
             }
         }
+
         var contenedor = document.getElementById("contenedor");
         //Listener que queda a la escucha de si se hace click en el body, al tener el menu lateral abierto y lo oculta
         contenedor.addEventListener("click", cierraMenu, true);
