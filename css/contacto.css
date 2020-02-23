@@ -79,3 +79,90 @@ h2 {
     background-color: #AA1111;
     color: white;
 }
+
+
+
+/* Responsive */
+@media screen and (max-width:900px) {
+
+
+    /*Texto informativo*/
+    #colegio {
+        margin-left: 10%;
+    }
+
+    /*Formulario de contacto*/
+    #contactanos {
+        margin-left: 10px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    /*Texto informativo*/
+    #colegio {
+        margin-left: 0;
+        width: 500px;
+    }
+
+    /*Formulario de contacto*/
+    #contactanos {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 500px;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+
+    /*Tamaño imagen Correo Electronico*/
+    .contactoPng {
+        width: 100px;
+        margin-left: 150px;
+    }
+
+
+    /*Tamaño imagen Telefono*/
+    .contactoPng2 {
+        width: 100px;
+        margin-left: 150px;
+        margin-top: 10px;
+    }
+
+    /*Tamaño imagen Ubicacion*/
+    .contactoPng3 {
+        width: 100px;
+        margin-left: 150px;
+        margin-top: 10px
+    }
+
+    /*Texto correo*/
+    #correo {
+
+        margin-left: 100px;
+
+    }
+
+    /*Texto telefono*/
+    #telefono {
+        margin-left: 100px;
+        margin-top: 10px;
+    }
+
+    /*Texto ubicacion*/
+    #direccion {
+
+        margin-left: 100px;
+        margin-top: 10px;
+    }
+
+    #mapa {
+        margin-left: 25px;
+        width: 500px;
+
+    }
+
+}
