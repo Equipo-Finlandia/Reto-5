@@ -11,8 +11,10 @@
 
 <body>
     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
+    
+    <!--Boton que llama al script del menu vertical -->
 
-
+<!--Menu vertical -->
 
     <div id="menu">
         <nav>
@@ -58,6 +60,9 @@
         </nav>
     </div>
 
+    <!--Fin Menu vertical -->
+    
+      <!--Menu horizontal superior-->
     <div id="encabezado">
         <div id="EncabezadoSegundaria">
             <a href="../index.html">
@@ -91,8 +96,15 @@
             </a>
         </div>
     </div>
+    
+      <!--Fin Menu horizontal superior-->
+    
+    
     <div id="contenedor">
         <a href="../index.html"><img id="CTSPV" src="../imagenes/cebanc.jpg"></a>
+        
+        <!--Menu de inicio de sesión-->
+        
         <div id="menu_registro" class="form-group">
             <h1>Acceder</h1>
             <form id="form_login" method="post" action="../php/login.php">
@@ -111,6 +123,10 @@
                 <br />
                 <hr />
             </form>
+            
+            <!--Texto informativo-->
+            
+            
             <h3>Aún no estás colegiado?</h3>
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
@@ -179,6 +195,8 @@
             </div>
         </div>
     </div>
+    
+       <!--Funcion Responsive con ocultar mostrar menu vertical-->
 
     <script>
         function responsive(resolucion) {

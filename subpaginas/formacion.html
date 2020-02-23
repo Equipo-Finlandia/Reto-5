@@ -10,9 +10,12 @@
 
 <body>
     <div>
+        <!--Boton que llama al script del menu vertical -->
         <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
     </div>
 
+    
+    <!--Menu vertical -->
     <div id="menu">
         <nav>
             <ul id="menu_principal">
@@ -57,6 +60,9 @@
         </nav>
     </div>
 
+        <!--Fin Menu vertical -->
+
+    <!--Menu horizontal superior-->
 
     <div id="encabezado">
         <div id="EncabezadoSegundaria">
@@ -91,6 +97,8 @@
             </a>
         </div>
     </div>
+    
+        <!--Fin Menu horizontal superior-->
     <div id="contenedor">
         <a href="../index.html"><img id="CTSPV" src="../imagenes/cebanc.jpg" alt="logotipo del colegio"></a>
         
@@ -119,7 +127,9 @@
         </div>
         <h1>Formación</h1>
         <hr>
-        <!--Primer noticia-->
+        
+        <!--Texto informativo -->
+        
         <div class="row">
             <h3>Cursos de programacion web (JavaScript, PHP, HTML)</h3>
             <div class="col-sm-4 noticias">
@@ -131,7 +141,7 @@
             </div>
         </div>
 
-        <!--Segundo-->
+           <!--Texto informativo 2 -->
         <div class="row">
             <h3>Cursos de programacion web (JavaScript, PHP, HTML)</h3>
             <div class="col-sm-4 noticias">
@@ -143,6 +153,8 @@
             </div>
         </div>
     </div>
+    
+     <!--Funcion Responsive con ocultar mostrar menu vertical-->
 
     <script>
         function responsive(resolucion) {

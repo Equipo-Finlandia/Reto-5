@@ -10,7 +10,10 @@
 </head>
 
 <body>
+    
+    <!--Boton que llama al script del menu vertical -->
     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
+    
   <!--Inicio menu vertical-->
     <div id="menu">
         <nav>
@@ -56,6 +59,10 @@
         </nav>
     </div>
 
+        <!--Fin Menu vertical -->
+
+    <!--Menu horizontal superior-->
+    
     <div id="encabezado">
         <div id="EncabezadoSegundaria">
             <a href="../index.html">
@@ -89,11 +96,16 @@
             </a>
         </div>
     </div>
+    
+        <!--Fin Menu horizontal superior-->
+    
+    
     <div id="contenedor">
         <a href="../index.html"><img id="CTSPV" src="../imagenes/cebanc.jpg"></a>
         <div id="definicionConvenio">
             <h1>Información sobre los tipos de contrato</h1>
             <hr>
+            
             <!--Primer Contrato-->
             <div class="row">
                 <h3>Contrato de Indefinido</h3>
@@ -108,6 +120,8 @@
                     <a class="pdf" href="../pdf/idefinido.pdf" target="_blank"> <img src="../imagenes/pdf.webp" alt=""> Descargar</a>
                 </div>
             </div>
+            
+            
             <!--Segundo Contrato-->
             <div class="row">
                 <h3>Contrato de Relevo</h3>
@@ -120,6 +134,8 @@
                     <a class="pdf" href="../pdf/relevo.pdf" target="_blank"> <img src="../imagenes/pdf.webp" alt=""> Descargar</a>
                 </div>
             </div>
+            
+            
             <!--Tercer Contrato-->
             <div class="row">
                 <h3>Contrato de Prácticas</h3>
@@ -139,6 +155,7 @@
             <h1>Información sobre los convenios</h1>
             <hr>
         </div>
+        
             <!--Menu de inicio de sesion-->
         <div id="menu_registro" class="form-group">
             <h1>Acceder</h1>
@@ -162,6 +179,8 @@
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
+        
+        
         <!--Primer noticia-->
         <div class="row">
             <h3>Convenio de Alojamientos Gipuzkoa</h3>
@@ -176,6 +195,8 @@
                 <a class="pdf" href="../pdf/Alojamiento.pdf" target="_blank"> <img src="../imagenes/pdf.webp" alt=""> Descargar</a>
             </div>
         </div>
+        
+        
         <!--Segunda noticia-->
         <div class="row">
             <h3>Convenio de Autoescuelas de Gipuzkoa</h3>
@@ -188,6 +209,8 @@
                 <a class="pdf" href="../pdf/autoescuela.pdf" target="_blank"> <img src="../imagenes/pdf.webp" alt=""> Descargar</a>
             </div>
         </div>
+        
+        
         <!--Tercera noticia-->
         <div class="row">
             <h3>Hostelería</h3>
@@ -206,6 +229,8 @@
                 <a class="pdf" href="../pdf/hosteleria.pdf" target="_blank"> <img src="../imagenes/pdf.webp" alt=""> Descargar</a>
             </div>
         </div>
+        
+        
         <!--Cuarta noticia-->
         <div class="row">
             <h3>Convenio de Comercio Metal de Gipuzkoa </h3>
@@ -222,7 +247,7 @@
         </div>
     </div>
 
-
+<!--Funcion Responsive con ocultar mostrar menu vertical-->
 
     <script>
          function responsive(resolucion) {
