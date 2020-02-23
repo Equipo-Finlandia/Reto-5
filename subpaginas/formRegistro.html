@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Registro</title>
+    <title>Colegiación</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="..\css\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="..\css\index.css">
@@ -91,7 +91,8 @@
 
         <div id="menu_registro" class="form-group">
             <h1>Acceder</h1>
-            <form id="form_login" method="" action="php/login.php">
+            
+            <form id="form_login" method="post" action="php/login.php" onsubmit="return validaLogin()">
                 <label for="nombre" id="etiq_nombre">
                     <p>Nombre de usuario:</p>
                 </label>
@@ -107,29 +108,36 @@
                 <br />
                 <hr />
             </form>
-            <h3>Aún no estás colegiado?</h3>
+            
+            <h3>¿Aún no estás colegiado?</h3>
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
-        <h2>Razones por las que hay que colegiarse</h2>
+        
+        
+        <h2>Razones por las que colegiarse</h2>
         <div>
             <div id="razones">
-
 
                 <p> Los colegios profesionales son entidades corporativas de derecho público, sin ánimo de lucro cuyo OBJETIVO PRIMERO es DEFENDER LA PROFESIÓN, pero además el CTSPV:</p>
 
                 <p> Defiende las competencias que por el hecho de estar en el colegio que corresponden
                     Al colegio no puede pertenecer cualquiera, por lo que establece una MARCA DE EXCLUSIVIDAD para los colegiados.</p>
                 <p>Cada vez más las empresas del sector se dirigen al SERVICIO DE EMPLEO del CTSPV para seleccionar Licenciados, Ingenieros o Máster en Ingeniería Informática.
-                    Si estás desempleado, la BOLSA DE TRABAJO puede serte útil porque al colegio llegan ofertas de empleo muy interesantes.</p>
+
+                    Si estás desempleado, la BOLSA DE TRABAJO puede serte útil porque al colegio nos llegan ofertas de empleo muy interesantes.</p>
                 <p>La BOLSA DE TRABAJO puede serte útil si lo que buscas es un cambio de empleo.
-                    Tanto si estas desempleado como si buscas puedes utilizar La BOLSA DE TRABAJO del CTSPV.</p>
+                    Tanto si estas desempleado como si buscas trabajo, puedes utilizar La BOLSA DE TRABAJO del CTSPV.</p>
+
             </div>
 
             <h2>Formulario de Registro</h2>
 
             <div id="formulario">
-                <form method="post" action="../php/registro.php">
+                <!--Formulario carga el php de registro. Solo si validaTodo devuelve true-->
+                <form method="post" action="..\php\registro.php" onsubmit="return validaTodo()">
+                    <!--Columna izquierda del formulario de registro-->
+
                     <div id="form1">
                         <br />
                         <legend>Formulario de Registro</legend>
@@ -148,6 +156,7 @@
                         <label for="pass2" id="etiq_contrasena2">Repetir contraseña: </label>
                         <input type="password" id="pass2" name="pass2" placeholder="Repetir Contraseña" onfocusout="comparaContrasena()"><br />
                     </div>
+                    <!--Columna derecha del formulario de registro-->
 
                     <div id="form2">
                         <br /><br /><br /><br />
@@ -163,66 +172,66 @@
                         <input type="text" id="telefono" name="telefono" placeholder="Teléfono" onfocusout="validaTelefono()"><br />
                     </div>
                     <br /><br />
+
+
                     <input type="submit" value="Enviar" id="botonEnviar">
                 </form>
+
             </div>
-
-            <p id="mensaje">*Despues de enviar el formulario le llaramos a el telefono facilitado en un plazo de 14 dias</p>
-
+            <p id="mensaje">*Una vez verifiquemos sus datos, le llaremos al teléfono facilitado en un plazo de 14 dias para ser dado de alta</p>
         </div>
-    </div>
 
-    <script>
-        function responsive(x) {
+        <script>
+            function responsive(x) {
 
-            var menuvertical = document.getElementById("menu");
-
-
-            if (x.matches) { // si coincide con la resolución de ventana
+                var menuvertical = document.getElementById("menu");
 
 
-            } else {
-
-                menuvertical.style.display = "none";
+                if (x.matches) { // si coincide con la resolución de ventana
 
 
+                } else {
+
+                    menuvertical.style.display = "none";
+
+
+                }
             }
-        }
 
-        var x = window.matchMedia("(max-width: 900px)")
-        responsive(x) // Llama al listener
-        x.addListener(responsive); //Vincula el listener al cambiar de estado
+            var x = window.matchMedia("(max-width: 900px)")
+            responsive(x) // Llama al listener
+            x.addListener(responsive); //Vincula el listener al cambiar de estado
 
 
-        //Funcion que "abre" el menu lateral
+            //Funcion que "abre" el menu lateral
 
-        var abierto = false;
+            var abierto = false;
 
-        function cargaMenu() {
-            var menuvertical = document.getElementById("menu");
-            if (abierto === true) {
-                menuvertical.style.display = "none";
-                console.log(abierto);
+            function cargaMenu() {
+                var menuvertical = document.getElementById("menu");
+                if (abierto === true) {
+                    menuvertical.style.display = "none";
+                    console.log(abierto);
+                    abierto = false;
+
+                } else {
+                    menuvertical.style.display = "block";
+                    console.log(abierto);
+                    abierto = true;
+                }
+            }
+            var contenedor = document.getElementById("contenedor");
+            //Listener que queda a la escucha de si se hace click en el body, al tener el menu lateral abierto y lo oculta
+            contenedor.addEventListener("click", cierraMenu, true);
+
+            function cierraMenu() {
+                var menuvert = document.getElementById("menu");
+
+                menuvert.style.display = "none";
                 abierto = false;
-
-            } else {
-                menuvertical.style.display = "block";
-                console.log(abierto);
-                abierto = true;
             }
-        }
-        var contenedor = document.getElementById("contenedor");
-        //Listener que queda a la escucha de si se hace click en el body, al tener el menu lateral abierto y lo oculta
-        contenedor.addEventListener("click", cierraMenu, true);
 
-        function cierraMenu() {
-            var menuvert = document.getElementById("menu");
-
-            menuvert.style.display = "none";
-            abierto = false;
-        }
-
-    </script>
+        </script>
 
 </body>
 

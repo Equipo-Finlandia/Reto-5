@@ -15,6 +15,9 @@
     <div id="menu">
         <nav>
             <ul id="menu_principal">
+                <label id="acceso" for="submenu0">
+                        <a name="botonAcceso" href="javascript:cargaLogin();" >Acceder</a>
+                    </label>
                 <li>
                     <a href="..\index.html">🏠 Inicio</a>
                 </li>
@@ -93,11 +96,11 @@
                 <label for="nombre">
                     <p>Nombre de usuario:</p>
                 </label>
-                <input type="text" name="nombre" id="usr" class="form-control" placeholder="Usuario">
+                <input type="text" name="nombre" id="usr" class="form-control" placeholder="Usuario" onfocusout="validaNombreInicio()">
                 <label for="contraseña">
                     <p>Contraseña:</p>
                 </label>
-                <input type="password" name="contrasena" id="pwd" class="form-control" placeholder="Contraseña">
+                <input type="password" name="contrasena" id="pwd" class="form-control" placeholder="Contraseña" onfocusout="validaContrasenaInicio()">
 
                 <br />
                 <input type="submit" value="Iniciar Sesion" id="boton2">
@@ -162,7 +165,7 @@
                
                 <textarea rows="5" cols="40" name="problema"></textarea>
                 <br> <br />
-                <input type="submit" value="Enviar correo electronico">
+                <input type="submit" value="Enviar correo" id="boton2">
             </form>
 
         </div>
