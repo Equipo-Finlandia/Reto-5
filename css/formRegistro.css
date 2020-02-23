@@ -1,7 +1,8 @@
+/*VALIDACION: https://jigsaw.w3.org/css-validator/validator*/
 /*Titulo tipo h2*/
 h2 {
     width: 1024px;
-    padding: 10 20 10 20;
+    padding: 10px 20px 10px 20px;
     text-align: center;
     background-color:  #AA1111;
     color: white;

@@ -3,6 +3,7 @@
 <html lang="es">
 
 <head>
+    <title>Contacto</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
@@ -101,7 +102,7 @@
    
      
     <div id="contenedor">
-        <a href="../index.html"><img id="CTSPV" src="../imagenes/cebanc.jpg"></a>
+        <a href="../index.html"><img id="CTSPV" src="../imagenes/cebanc.jpg" alt="logo del colegio"></a>
         
         <!--Menu de inicio de sesion-->
         <div id="menu_registro" class="form-group">
@@ -151,7 +152,7 @@
         <!--Primer boton-->
         <div class="row">
             <div>
-                <img src="../imagenes/correo.png" class="contactoPng">
+                <img src="../imagenes/correo.png" class="contactoPng" alt="icono correo">
             </div>
             <div>
                 <p id="correo">
@@ -162,7 +163,7 @@
         <!--Segundo boton-->
         <div class="row">
             <div>
-                <img src="../imagenes/telefono.png" class="contactoPng2">
+                <img src="../imagenes/telefono.png" class="contactoPng2" alt="icono telefono">
             </div>
             <div>
                 <p id="telefono">
@@ -173,7 +174,7 @@
         <!--Tercer boton-->
         <div class="row">
             <div>
-                <img src="../imagenes/direccion.png" class="contactoPng3">
+                <img src="../imagenes/direccion.png" class="contactoPng3" alt="icono direccion">
             </div>
             <div>
                 <p id="direccion">
@@ -187,14 +188,13 @@
 
         <div id="contactanos">
             <form action="mailto:CTSPVfinlandia@gmail.com" method="post" enctype="text/plain">
-                <p>Introduzca su nombre:</p>
+                <label for="Nombre">Introduzca su nombre:</label>
                 <input type="text" name="Nombre" size="30">
 
-                <p> Ingrese su dirección de correo electronico:</p>
+                <label for="Direccion de correo electronico"> Ingrese su dirección de correo electronico:</label>
                 <input type="text" name="Direccion de correo electronico" size="30">
 
-                <p> Indiquenos brevemente el motivo de contacto con el CTSPV:</p>
-
+                <label for="Motivo"> Indiquenos brevemente el motivo de contacto con el CTSPV:</label>
                 <textarea rows="5" cols="40" name="Motivo"></textarea>
                 <br> <br />
                 <input type="submit" value="Enviar correo" id="boton2">

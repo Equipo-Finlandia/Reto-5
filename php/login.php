@@ -80,16 +80,16 @@
 	 echo "<h2><br> Has iniciado sesión correctamente!</h2>"; 
      echo "<p>Volviendo a inicio</p>";
 	 echo "<script>sesionCorrecto()</script>";
-      //header("Refresh:5; URL=https://192.168.0.104/");
-	  header("Refresh:5; URL=http://212.142.193.210:10104/index.html");
+      header("Refresh:5; URL=https://192.168.0.104/index.html");
+	  //header("Refresh:5; URL=http://212.142.193.210:10104/index.html");
     
  }else{
      echo "<h2>Contraseña o usuario incorrectos</h2>";
 	 echo "<h2>Si ya se ha registrado con este usuario, es posible que su cuenta esté en proceso <br>
 	 de ser dada de alta.</h2>";
  echo "<br> <h3>Volviendo a inicio...</h3>";
-  //header("Refresh:7; URL=https://192.168.0.104/");
-  header("Refresh:5; URL=http://212.142.193.210:10104/index.html");
+  header("Refresh:7; URL=https://192.168.0.104/index.html");
+  //header("Refresh:5; URL=http://212.142.193.210:10104/index.html");
  }
  mysqli_close($link);
 ?>
