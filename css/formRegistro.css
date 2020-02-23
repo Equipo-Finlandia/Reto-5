@@ -31,14 +31,16 @@ h2 {
 /*Contenedor con texto: Razones de colegiación*/
 #razones {
     width: 650px;
+    max-height:700px;
     border: 2px solid red;
     padding: 20px;
     background-color: bisque;
-    column-count: 2;
+    column-count: 1;
     margin: 0 auto;
     margin-top: 50px;
     background-color: transparent;
 }
+
 
 /*Columna izquierda del formulario*/
 #form1 {
