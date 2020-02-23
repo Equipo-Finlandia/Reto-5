@@ -12,36 +12,40 @@
     <div>
         <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
     </div>
-    
+
     <div id="menu">
         <nav>
             <ul id="menu_principal">
+                <label id="acceso" for="Acceder">
+                    <a name="botonAcceso" href="javascript:cargaLogin();">Acceder</a>
+                </label>
                 <li>
                     <a href="../index.html">🏠 Inicio</a>
                 </li>
                 <li>
-                    <label for="submenu1">
+                    <label for="Contactanos">
                         <a href="contactanos.html"> 🏫 Contáctanos</a>
                     </label>
                 </li>
                 <li>
-                    <label for="submenu2">
+                    <label for="Convenio">
                         <a href="convenio.html"> 🤝 Convenios</a>
                     </label>
                 </li>
                 <li>
-                    <label for="submenu3">
+                    <label for="Colegiacion">
                         <a href="formRegistro.html"> 🎓 Colegiación</a>
                     </label>
                 </li>
-                <li>
-                    <label for="submenu5">
-                        <a href="formacion.html"> 🖥️ Formación</a>
+
+                <li id="formacion">
+                    <label for="Formacion" id="activo">
+                        <a href="formacion.html"> ➥🖥️ Formación</a>
                     </label>
                 </li>
-                <li>
-                    <label for="submenu6">
-                        <a href="bolsaTrabajo.html">➥💰 Bolsa de empleo</a>
+                <li id="bolsaTrabajo">
+                    <label for="bolsaTrabajo">
+                        <a href="bolsaTrabajo.html">💰 Bolsa de empleo</a>
                     </label>
                 </li>
                 <li>
@@ -67,7 +71,7 @@
             <a id="colegiacion" href="formRegistro.html">
                 <div>Colegiacion</div>
             </a>
-            <a id="formacion"href="formacion.html">
+            <a id="formacion" href="formacion.html">
                 <div>Formacion</div>
             </a>
             <a id="bolsaTrabajo" href="bolsaTrabajo.html">
@@ -100,10 +104,10 @@
                     <p>Contraseña:</p>
                 </label>
                 <input type="password" name="contrasena" id="pwd" class="form-control" placeholder="Contraseña">
-    
+
                 <br />
                 <input type="submit" value="Iniciar Sesion" id="boton2">
-    
+
                 <br />
                 <hr />
             </form>
@@ -112,7 +116,7 @@
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
         <h1>Formación</h1>
-        <hr>    
+        <hr>
         <!--Primer noticia-->
         <div class="row">
             <h3>Cursos de programacion web (JavaScript, PHP, HTML)</h3>
@@ -137,8 +141,8 @@
             </div>
         </div>
     </div>
-    
-        <script>
+
+    <script>
         function responsive(x) {
 
             var menuvertical = document.getElementById("menu");
@@ -187,6 +191,7 @@
             menuvert.style.display = "none";
             abierto = false;
         }
+
     </script>
 
 </body>

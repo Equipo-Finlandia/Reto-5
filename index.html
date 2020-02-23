@@ -13,37 +13,41 @@
 
     <!--Menu vertical -->
 
-    <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()"> <!--Boton que llama al script del menu vertical -->
+    <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
+    <!--Boton que llama al script del menu vertical -->
 
     <div id="menu">
         <nav>
             <ul id="menu_principal">
-                <li>
-                    <a href="index.html">🏠 Inicio</a>
+                <label id="acceso" for="Acceder">
+                    <a name="botonAcceso" href="javascript:cargaLogin();">Acceder</a>
+                </label>
+                <li id="activo">
+                    <a href="index.html">➥🏠 Inicio</a>
                 </li>
                 <li>
-                    <label for="submenu1">
+                    <label for="Contactanos">
                         <a href="subpaginas/contactanos.html"> 🏫 Contáctanos</a>
                     </label>
                 </li>
                 <li>
-                    <label for="submenu2">
+                    <label for="Convenios">
                         <a href="subpaginas/convenio.html"> 🤝 Convenios</a>
                     </label>
                 </li>
                 <li>
-                    <label for="submenu3">
+                    <label for="Colegiacion">
                         <a href="subpaginas/formRegistro.html"> 🎓 Colegiación</a>
                     </label>
                 </li>
-                <li>
-                    <label for="submenu5">
-                        <a href="subpaginas/formacion.html"> 🖥️ Formación</a>
+                <li id="formacion">
+                    <label for="Formacion" >
+                        <a href="formacion.html"> 🖥️ Formación</a>
                     </label>
                 </li>
-                <li>
-                    <label for="submenu6">
-                        <a href="subpaginas/bolsaTrabajo.html">➥💰 Bolsa de empleo</a>
+                <li id="bolsaTrabajo">
+                    <label for="bolsaTrabajo">
+                        <a href="bolsaTrabajo.html">💰 Bolsa de empleo</a>
                     </label>
                 </li>
                 <li>
