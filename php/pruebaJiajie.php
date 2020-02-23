@@ -1,6 +1,6 @@
 <html lang="es">
 <head>
-<script type="text/javascript" src="../js/sesion.js"></script>
+<script type="text/javascript" src="../js/modoNoche.js"></script>
 <meta charset="UTF-8">
 <title> Iniciando sesion </title>
 </head>
