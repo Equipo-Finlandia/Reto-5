@@ -1,11 +1,48 @@
+/*Tamaño imagen Correo Electronico*/
 .contactoPng {
     width: 100px;
     margin-left: 150px;
 }
 
-#colegio{
-        width: 900px;
-    max-height:800px;
+
+/*Tamaño imagen Telefono*/
+.contactoPng2 {
+    width: 100px;
+    margin-left: 470px;
+    margin-top: -135px;
+}
+
+/*Tamaño imagen Ubicacion*/
+.contactoPng3 {
+    width: 100px;
+    margin-left: 790px;
+    margin-top: -135px
+}
+
+/*Texto correo*/
+#correo {
+
+    margin-left: 100px;
+
+}
+
+/*Texto telefono*/
+#telefono {
+    margin-left: 400px;
+    margin-top: -35px;
+}
+
+/*Texto ubicacion*/
+#direccion {
+
+    margin-left: 700px;
+    margin-top: -35px;
+}
+
+/*Texto informativo*/
+#colegio {
+    width: 900px;
+    max-height: 800px;
     border: 2px solid red;
     padding: 20px;
     background-color: transparent;
@@ -14,68 +51,31 @@
     margin-top: 50px;
 }
 
-.contactoPng2 {
-    width: 100px;
-    margin-left: 470px;
-    margin-top: -135px;
 
-
-}
-
-
-.contactoPng3 {
-    width: 100px;
-    margin-left: 790px;
-    margin-top: -135px
-}
-
-#correo {
-
-    margin-left: 100px;
-
-
-}
-
-
-#telefono {
-    margin-left: 400px;
-    margin-top: -35px;
-
-}
-
-#direccion {
-
-    margin-left: 700px;
-    margin-top: -35px;
-
-}
-
-
-
-.row {
-    margin-top: 00px;
-}
-
+/*Menu acceder*/
 #menu_registro {
     margin-top: -100px;
     height: 550px;
 }
 
+/*Mapa ubicacion*/
 #mapa {
     margin-left: 220px;
     padding-bottom: 50px;
 }
 
+/*Formulario contacto*/
 #contactanos {
 
     margin-left: 320px;
     padding-bottom: 50px;
 }
 
+/*Titulos*/
 h2 {
     width: 1024px;
     padding: 10 20 10 20;
     text-align: center;
-    background-color:  #AA1111;
+    background-color: #AA1111;
     color: white;
 }

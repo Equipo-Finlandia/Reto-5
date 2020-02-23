@@ -10,8 +10,10 @@
 </head>
 
 <body>
+    <!--Boton menu-->
     <input type="button" value="" name="botonMenu" id="botonMenu" onClick="cargaMenu()">
 
+    <!--Inicio menu vertical-->
     <div id="menu">
         <nav>
             <ul id="menu_principal">
@@ -57,9 +59,9 @@
             </ul>
         </nav>
     </div>
+        <!--Fin menu vertical-->
 
-
-
+<!--Inicio menu horizontal-->
     <div id="encabezado">
         <div id="EncabezadoSegundaria">
             <a href="../index.html">
@@ -93,8 +95,12 @@
             </a>
         </div>
     </div>
+     <!--Fin menu horizontal-->
+   
+     
     <div id="contenedor">
         <a href="../index.html"><img id="CTSPV" src="../imagenes/cebanc.jpg"></a>
+        <!--Inicio menu acceso-->
         <div id="menu_registro" class="form-group">
             <h1>Acceder</h1>
             <form id="form_login" method="" action="../php/login.php">
@@ -117,10 +123,13 @@
             <p>Si estás titulado y deseas colegiarte, haz click <a href="subpaginas/formRegistro.html">Aqui</a></p>
             <input type="button" value="Cerrar" name="botonCierre" id="boton2" onClick="cerrarLogin()">
         </div>
+        <!--Fin menu acceso-->
 
 
         <h2>¿Que es el colegio?</h2>
-
+        
+        
+<!--Texto informativo-->
         <p id="colegio">Es una entidad sin ánimo de lucro que acoge a todos los LICENCIADOS EN INFORMÁTICA, INGENIEROS EN INFORMÁTICA y MASTER EN INGENIERÍA INFORMÁTICA.
             <br><br />
             Pertenecer al colectivo de profesionales de Ingeniería Informática te permite colaborar activamente en el desarrollo de la profesión permitiendo que la Ingeniería Informática sea reconocida profesionalmente por la sociedad y por las instituciones tanto públicas como privadas.
@@ -131,7 +140,9 @@
             Los Colegios profesionales ofrecen gran cantidad de servicios a los colegiados entre los que destaca la formación, el empleo y la participación en grupos de trabajo especializados. Puedes consultar la gran variedad de servicios que se ofrecen aquí.
             <br><br />
             Si eres estudiante de un Master Universitario de Ingeniería Informática puedes participar activamente, conociendo las salidas profesionales que más te pueden interesar y adquiriendo complementos de formación que te permitan asegurar tu salida al mercado laboral.<br /></p>
-
+        
+        
+<!--Inicio Contacto-->
         <h2>Contactanos</h2>
 
         <!--Primer boton-->
@@ -141,29 +152,29 @@
             </div>
             <div>
                 <p id="correo">
-                    Correo Electronico:  info@CTSPV.com
+                    Correo Electronico: info@CTSPV.com
                 </p>
             </div>
         </div>
-
+        <!--Segundo boton-->
         <div class="row">
             <div>
                 <img src="../imagenes/telefono.png" class="contactoPng2">
             </div>
             <div>
                 <p id="telefono">
-                    Telefono de Contacto:  +34 123 456 789
+                    Telefono de Contacto: +34 123 456 789
                 </p>
             </div>
         </div>
-
+        <!--Tercer boton-->
         <div class="row">
             <div>
                 <img src="../imagenes/direccion.png" class="contactoPng3">
             </div>
             <div>
                 <p id="direccion">
-                    Direccion:  Berio Pasealekua, 50, 20018 Donostia, Gipuzkoa
+                    Direccion: Berio Pasealekua, 50, 20018 Donostia, Gipuzkoa
                 </p>
             </div>
         </div>
@@ -188,17 +199,21 @@
 
         </div>
 
-
+<!--Inicio Contacto-->
+        
+        <!--Mapa ubicacion-->
 
         <div id="mapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.4483832497463!2d-2.0166142!3d43.3048723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51b0708baa02bb%3A0x4b55a087d653821b!2sCebanc!5e0!3m2!1ses!2ses!4v1582044741731!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
     </div>
 
+    
+    <!--Responsive-->
     <script>
         function responsive(x) {
 
-            var menuvertical = document.getElementById("menu");
+            var menuvertical = document.getElementById("menu"); //Variable para el elemento MENU
 
 
             if (x.matches) { // si coincide con la resolución de ventana
