@@ -78,7 +78,7 @@ h1 {
 /*Fin encabezado*/
 
 
-
+/*Menu acceder*/
 #menu_registro {
     margin: 50 0 0 290;
     width: 450px;
@@ -121,7 +121,7 @@ ul {
     margin-top: -30px;
 }
 
-
+/*Contenedor menu*/
 #menu {
     background: black;
     position: fixed;
@@ -186,7 +186,7 @@ label {
     padding-left: 10px;
 }
 
-
+/*Boton para el responsive*/
 #botonMenu {
 
     background-image: url('../imagenes/botonmenu.PNG');
@@ -214,8 +214,7 @@ label {
 
 /*Contenedor noticas*/
 .noticias {
-    padding: 25px;
-    text-align: justify;
+    padding: 20px;
 }
 
 /*imagenes de noticias*/
